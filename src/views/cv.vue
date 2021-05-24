@@ -31,6 +31,7 @@
 
             <div class="key-con-item">
                 <h6 class="exp-head">Commercial Web Applications</h6>
+                <p>ReactJs<span>1+ years</span></p>
                 <p>VueJs<span>4+ years</span></p>
                 <p>Javascript<span>6+ years</span></p>
                 <p>Java<span>4+ years</span></p>
@@ -167,7 +168,7 @@ export default {
                 {
                     title: 'Software Developer',
                     employer: 'Fusion Sport Inc.',
-                    dates: 'October 2017 - April 2018 (7 months)',
+                    dates: 'August 2016 - August 2018 (2 years)',
                     description: [
                         `Fusion is a sports science company, based in Brisbane, Australia. They sell hardware products 
                             and provide a web app, all designed to 
@@ -189,30 +190,6 @@ export default {
                             It was approved for resourcing by management, and the Dashboard Builder was born. based on 
                             feedback from colleagues still working at Fusion it appears to remain a
                             customer favorite. More details are available on the <a href="/work">projects page</a>.`,
-                        `<span class="remote">This was a 100% remote position</span>`,
-                    ],
-                    references: true,
-                },
-                {
-                    title: 'Web Application Developer',
-                    employer: 'Profiler Corporation',
-                    dates: 'August 2016 - October 2017 (1 year 3 months)',
-                    description: [
-                        `Profiler was sports science company based in Dunedin, New Zealand. They wrote 
-                            and maintained a web application called Smartabase, built to assist 
-                            with management of sports teams and athlete development.`,
-                            `I was originally assigned to the insights-out part of Smartabase, due to my ReactJs
-                            experience and passion for UI design and build. The first few months were spent 
-                            prototyping, designing and building new UI features.
-                            Pivots occurred, and I shifted to being more backend focused, writing new features in Java,
-                            providing API endpoints, debugging and refactoring.`,
-                        `Nearer the end of my time in this position my focus shifted back to the frontend, 
-                            with a most of my time being spent writing <em>VueJS</em> and beginning to increase its
-                            usage throughout the code base.`,
-                        `Please note that Fusion Sport acquired Profiler Corp and all of its staff while I was working 
-                            at Profiler. I've listed the two as separate positions. Details of my work at Fusion Sport can be found above.`,
-                        `Lots of autonomy and room to move in directions that complimented your skill sets and passions, 
-                            and a great team, full of awesome talented people. This was a good job.`,
                         `<span class="remote">This was a 100% remote position</span>`,
                     ],
                     references: true,

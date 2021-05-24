@@ -14,7 +14,7 @@
             <featurecard
                 title="Welcome QR" sub="Web App" 
                 :image="qr_img" :text="qr_txt"
-                aref="https://welcomeqr.codes"
+                aref="https://github.com/HamishClulee/welcomeqr.codes"
             ></featurecard>
 
             <featurecard

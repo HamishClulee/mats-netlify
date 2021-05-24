@@ -31,12 +31,12 @@
 
             <div class="key-con-item">
                 <h6 class="exp-head">Commercial Web Applications</h6>
-                <p>VueJs<span>3+ years</span></p>
-                <p>Javascript<span>5+ years</span></p>
+                <p>VueJs<span>4+ years</span></p>
+                <p>Javascript<span>6+ years</span></p>
                 <p>Java<span>4+ years</span></p>
                 <p>SASS/SCSS/CSS <span>5+ years</span></p>
-                <p>NodeJs<span>3+ years</span></p>
-                <p>Linux<span>5+ years</span></p>
+                <p>NodeJs<span>4+ years</span></p>
+                <p>Linux<span>6+ years</span></p>
             </div>
 
             <div class="key-con-item">
@@ -45,7 +45,7 @@
                 <p>Coaching<span>4+ years</span>
                 <p>Team Leadership <span>~2 years</span></p>
                 <p>UI/UX Design <span>2+ years</span></p>
-                <p>Working Remote <span>3+ years</span></p>
+                <p>Working Remote <span>4+ years</span></p>
                 <p>Gimp/Inkscape/Adobe suite <span>5+ years</span></p>
             </div>
 
@@ -73,16 +73,32 @@ export default {
     data () {
         return {
             jobs: [
+              {
+                title: 'Senior Javascript Developer',
+                employer: 'Dovetail Studios',
+                dates: 'January 2020 - Current',
+                description: [
+                  `Dovetail leads product development of some of the fastest growing companies in the world,
+                  providing digital strategy, growth strategy, design and development services to both the
+                  private and public sector. Dovetail is a digital agency which is moving it's focus towards
+                  incubation and venture capital, we take early stage start ups and work with founders to build
+                  awesome products with big market impact. `,
+                  `I work as a senior javascript developer for new currency hedging and BI platform called Fluenccy.`,
+                  `On a daily basis, delivering features in ReactJs and Typescript, or Node. Working directly with
+                  the founders to understand their needs and build their vision.`,
+                ],
+                references: true,
+              },
                 {
                     title: 'Frontend Tech Lead',
                     employer: 'AduroLabs Vietnam',
-                    dates: 'January 2020 - August 2020 (8 Months)',
+                    dates: 'January 2020 - December 2020 (12 Months)',
                     description: [
                         `AduroLabs is a Health and Wellness service provider.`,
                         `I was primarily 
                         tasked with leadership and mentoring for the frontend teams. 
                         Daily responsibilities included code reviews, coaching, writing 
-                        technical documemtation, making architecture decisions and managing 
+                        technical documentation, making architecture decisions and managing
                         sprints and tickets.`,
                         `Higher level responsibilities included interviewing 
                         potential hires, technical product management, building better agile 
@@ -110,7 +126,7 @@ export default {
                                     which had to act in place of pagination due to how lists are displayed and indexed.
                                 </li> 
                                 <li>
-                                    A system of custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonary cards</a>, 
+                                    A system of custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonry cards</a>,
                                     designed to show the user a sample of the data associated with the first class object (IPs, domains, superdomains) viewing, remembering that each list could 
                                     contain over a million items, and each first class object could contain 
                                     up to 10 lists.
@@ -141,7 +157,7 @@ export default {
                             I created a <em>VueJs</em> and Webpack boilerplate to function as a base for new prototypes. 
                             It included a large number of UI components that conformed to the Allow Design styleguide. 
                             The boilerplate was successful in reducing the lag created between 
-                            designers and developers which occured when prototypes didn't match the style guide, and reduced lead time. 
+                            designers and developers which occurred when prototypes didn't match the style guide, and reduced lead time.
                             It remained in usage until the company folded early in 2019.`,
                         `Some fun challenges, especially building a component library from scratch.`,
                         `<span class="remote">This was a 100% remote position</span>`,
@@ -157,7 +173,7 @@ export default {
                             and provide a web app, all designed to 
                             provide athletes and sports teams with competitive advantages.`,
                         `Please note that Fusion Sport acquired Profiler Corp and all of it's staff while I was working 
-                            at Profiler. I've listed the two as seperate positions. Details of my work at Profiler can be found below.`,
+                            at Profiler. I've listed the two as separate positions. Details of my work at Profiler can be found below.`,
                         `The Fusion Sport Client list is impressive, you can check it out 
                             <a href="https://www.fusionsport.com/clients/" target="_blank">here</a>, 
                             working directly for internationally recognisable sports teams was a real buzz.`,
@@ -166,12 +182,12 @@ export default {
                             replacing Gulp and JQuery with 
                             a custom Webpack and <em>VueJs</em> boilerplate. The new boilerplate reduced lead time 
                             by a significant amount, and is still in usage today.`,
-                        `Being granted leadership of the Dasboard Builder project. After 
+                        `Being granted leadership of the Dashboard Builder project. After
                             identifying the most commonly requested items in 
                             customer dashboards with the team, I prototyped an application that enabled 
                             creation of dashboards without developer involvement.
                             It was approved for resourcing by management, and the Dashboard Builder was born. based on 
-                            feedback from collegaues still working at Fusion it appears to remain a
+                            feedback from colleagues still working at Fusion it appears to remain a
                             customer favorite. More details are available on the <a href="/work">projects page</a>.`,
                         `<span class="remote">This was a 100% remote position</span>`,
                     ],
@@ -185,16 +201,16 @@ export default {
                         `Profiler was sports science company based in Dunedin, New Zealand. They wrote 
                             and maintained a web application called Smartabase, built to assist 
                             with management of sports teams and athlete development.`,
-                            `I was orginally assigned to the insights-out part of Smartabase, due to my ReactJs 
+                            `I was originally assigned to the insights-out part of Smartabase, due to my ReactJs
                             experience and passion for UI design and build. The first few months were spent 
                             prototyping, designing and building new UI features.
-                            Pivots occured, and I shifted to being more backend focused, writing new features in Java, 
+                            Pivots occurred, and I shifted to being more backend focused, writing new features in Java,
                             providing API endpoints, debugging and refactoring.`,
                         `Nearer the end of my time in this position my focus shifted back to the frontend, 
                             with a most of my time being spent writing <em>VueJS</em> and beginning to increase its
                             usage throughout the code base.`,
                         `Please note that Fusion Sport acquired Profiler Corp and all of its staff while I was working 
-                            at Profiler. I've listed the two as seperate positions. Details of my work at Fusion Sport can be found above.`,
+                            at Profiler. I've listed the two as separate positions. Details of my work at Fusion Sport can be found above.`,
                         `Lots of autonomy and room to move in directions that complimented your skill sets and passions, 
                             and a great team, full of awesome talented people. This was a good job.`,
                         `<span class="remote">This was a 100% remote position</span>`,

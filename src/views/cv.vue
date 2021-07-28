@@ -264,8 +264,10 @@ $heading-neg-align: -2px
     .des-text
         font-family: $heading-font
         text-align: center
+        font-size: 1.3em
     .first-des-para
         margin-top: 20px
+
 .refs
    color: lighten($font, 10)
    margin-bottom: 15px

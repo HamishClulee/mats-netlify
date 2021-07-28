@@ -11,15 +11,15 @@
 
         <p class="des-text first-des-para">
             Passionate about all things Frontend.
-            I'm a big believer that attitude is the main ingredient in creating 
-            good devs and great teams, that attitude can be fostered and that 
+            I'm a big believer that attitude is the main ingredient in creating
+            good devs and great teams, that attitude can be fostered and that
             teaching is the most effective way to continue learning.
         </p>
         <p class="des-text">
-            I'm well read and versed in Software Engineering as a discipline. 
-            I've learned that the simple things are the most important, 
-            focusing on the basics and building solid foundations is the key. 
-            Complexity is unavoidable, the goal is to solve the problem 
+            I'm well read and versed in Software Engineering as a discipline.
+            I've learned that the simple things are the most important,
+            focusing on the basics and building solid foundations is the key.
+            Complexity is unavoidable, the goal is to solve the problem
             without making it worse.
         </p>
 
@@ -84,7 +84,7 @@ export default {
                   private and public sector. Dovetail is a digital agency which is moving it's focus towards
                   incubation and venture capital, we take early stage start ups and work with founders to build
                   awesome products with big market impact. `,
-                  `I work as a senior javascript developer for new currency hedging and BI platform called Fluenccy.`,
+                  `I work as a senior javascript developer for a new currency hedging and BI platform called Fluenccy.`,
                   `On a daily basis, delivering features in ReactJs and Typescript, or Node. Working directly with
                   the founders to understand their needs and build their vision.`,
                 ],
@@ -93,17 +93,17 @@ export default {
                 {
                     title: 'Frontend Tech Lead',
                     employer: 'AduroLabs Vietnam',
-                    dates: 'January 2020 - December 2020 (12 Months)',
+                    dates: 'January 2020 - December 2020 (1 year)',
                     description: [
                         `AduroLabs is a Health and Wellness service provider.`,
-                        `I was primarily 
-                        tasked with leadership and mentoring for the frontend teams. 
-                        Daily responsibilities included code reviews, coaching, writing 
+                        `I was primarily
+                        tasked with leadership and mentoring for the frontend teams.
+                        Daily responsibilities included code reviews, coaching, writing
                         technical documentation, making architecture decisions and managing
                         sprints and tickets.`,
-                        `Higher level responsibilities included interviewing 
-                        potential hires, technical product management, building better agile 
-                        processes and interfacing with other teams and departments within the 
+                        `Higher level responsibilities included interviewing
+                        potential hires, technical product management, building better agile
+                        processes and interfacing with other teams and departments within the
                         company.`,
                     ],
                     references: true,
@@ -113,9 +113,9 @@ export default {
                     employer: 'Netograph',
                     dates: 'July 2018 - July 2019 (1 year)',
                     description: [
-                        `Netograph provides a web app and API. Their frontend is written in <em>VueJs</em> 
-                            and Typescript, backed by a custom webpack configuration. Visualisations are written in 
-                            d3.js. I designed the UI and website, and wrote the vast majority frontend code currently hosted at 
+                        `Netograph provides a web app and API. Their frontend is written in <em>VueJs</em>
+                            and Typescript, backed by a custom webpack configuration. Visualisations are written in
+                            d3.js. I designed the UI and website, and wrote the vast majority frontend code currently hosted at
                             <a href="https://netograph.io" target="_blank">https://netograph.io</a>.`,
                         `Note worthy achievements include:
                             <ul>
@@ -125,11 +125,11 @@ export default {
                                 <li>
                                     The <a href="https://netograph.io/datasets/social/" target="_blank">infinite scroll library</a>,
                                     which had to act in place of pagination due to how lists are displayed and indexed.
-                                </li> 
+                                </li>
                                 <li>
                                     A system of custom <a href="https://netograph.io/datasets/social/domain/facebook.com" target="_blank">masonry cards</a>,
-                                    designed to show the user a sample of the data associated with the first class object (IPs, domains, superdomains) viewing, remembering that each list could 
-                                    contain over a million items, and each first class object could contain 
+                                    designed to show the user a sample of the data associated with the first class object (IPs, domains, superdomains) viewing, remembering that each list could
+                                    contain over a million items, and each first class object could contain
                                     up to 10 lists.
                                 </li>
                                 <li>
@@ -147,17 +147,17 @@ export default {
                     employer: 'Allow Design',
                     dates: 'Intermittent between January 2017 - February 2019 (Contracts totalling 12 months)',
                     description: [
-                        `Allow Design was a studio based in Dunedin, New Zealand. They had one primary client, 
-                            a US healthcare giant. They would create functioning mini applications as development 
-                            templates for devs that worked directly for healthcare firm.`, 
-                            `I was employed on and off for a number of these prototypes, creating small, standalone 
-                            web apps from a series of 
+                        `Allow Design was a studio based in Dunedin, New Zealand. They had one primary client,
+                            a US healthcare giant. They would create functioning mini applications as development
+                            templates for devs that worked directly for healthcare firm.`,
+                            `I was employed on and off for a number of these prototypes, creating small, standalone
+                            web apps from a series of
                             Photoshop files provided by an Allow designer.`,
-                            `I was also responsible for overhauling 
-                            the frontend tooling and build system to help make other contract developers more productive. 
-                            I created a <em>VueJs</em> and Webpack boilerplate to function as a base for new prototypes. 
-                            It included a large number of UI components that conformed to the Allow Design styleguide. 
-                            The boilerplate was successful in reducing the lag created between 
+                            `I was also responsible for overhauling
+                            the frontend tooling and build system to help make other contract developers more productive.
+                            I created a <em>VueJs</em> and Webpack boilerplate to function as a base for new prototypes.
+                            It included a large number of UI components that conformed to the Allow Design styleguide.
+                            The boilerplate was successful in reducing the lag created between
                             designers and developers which occurred when prototypes didn't match the style guide, and reduced lead time.
                             It remained in usage until the company folded early in 2019.`,
                         `Some fun challenges, especially building a component library from scratch.`,
@@ -170,24 +170,22 @@ export default {
                     employer: 'Fusion Sport Inc.',
                     dates: 'August 2016 - August 2018 (2 years)',
                     description: [
-                        `Fusion is a sports science company, based in Brisbane, Australia. They sell hardware products 
-                            and provide a web app, all designed to 
+                        `Fusion is a sports science company, based in Brisbane, Australia. They sell hardware products
+                            and provide a web app, all designed to
                             provide athletes and sports teams with competitive advantages.`,
-                        `Please note that Fusion Sport acquired Profiler Corp and all of it's staff while I was working 
-                            at Profiler. I've listed the two as separate positions. Details of my work at Profiler can be found below.`,
-                        `The Fusion Sport Client list is impressive, you can check it out 
-                            <a href="https://www.fusionsport.com/clients/" target="_blank">here</a>, 
+                        `The Fusion Sport Client list is impressive, you can check it out
+                            <a href="https://www.fusionsport.com/clients/" target="_blank">here</a>,
                             working directly for internationally recognisable sports teams was a real buzz.`,
                         `Note worthy achievements: `,
-                        `Rebuilding the tooling used by the Frontend team, 
-                            replacing Gulp and JQuery with 
-                            a custom Webpack and <em>VueJs</em> boilerplate. The new boilerplate reduced lead time 
+                        `Rebuilding the tooling used by the Frontend team,
+                            replacing Gulp and JQuery with
+                            a custom Webpack and <em>VueJs</em> boilerplate. The new boilerplate reduced lead time
                             by a significant amount, and is still in usage today.`,
                         `Being granted leadership of the Dashboard Builder project. After
-                            identifying the most commonly requested items in 
-                            customer dashboards with the team, I prototyped an application that enabled 
+                            identifying the most commonly requested items in
+                            customer dashboards with the team, I prototyped an application that enabled
                             creation of dashboards without developer involvement.
-                            It was approved for resourcing by management, and the Dashboard Builder was born. based on 
+                            It was approved for resourcing by management, and the Dashboard Builder was born. based on
                             feedback from colleagues still working at Fusion it appears to remain a
                             customer favorite. More details are available on the <a href="/work">projects page</a>.`,
                         `<span class="remote">This was a 100% remote position</span>`,

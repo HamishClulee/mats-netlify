@@ -11,17 +11,17 @@
         </div>
 
         <p>
-            Passionate about complex UI's, sharpening pencils and all things Javascript. 
+            Passionate about complex UI's, sharpening pencils and all things Javascript.
         </p>
         <p>
-            I've learned that the simple things are the most important, focusing on 
+            I've learned that the simple things are the most important, focusing on
             the basics and building solid foundations is the key.
-            Complexity is unavoidable, the goal is to solve the problem without 
-            making it worse. 
+            Complexity is unavoidable, the goal is to solve the problem without
+            making it worse.
         </p>
         <p>
-            A big believer that attitude is the main ingredient in creating good 
-            devs and great teams, that attitude can be fostered and that teaching is the 
+            A big believer that attitude is the main ingredient in creating good
+            devs and great teams, that attitude can be fostered and that teaching is the
             most effective way to continue learning.
         </p>
 
@@ -29,10 +29,10 @@
 
         <div class="header-icons-home">
             <a href="https://github.com/HamishClulee" target="_blank" class="icon-container-item">
-                <img src="https://more-art-than.science/images/github.svg" height="30"/>
+                <img src="/images/github.svg" height="30"/>
             </a>
             <a href="https://www.linkedin.com/in/hamish-clulee/" target="_blank" class="icon-container-item">
-                <img src="https://more-art-than.science/images/linkedin.svg" height="30" />
+                <img src="/images/linkedin.svg" height="30" />
             </a>
         </div>
     </div>

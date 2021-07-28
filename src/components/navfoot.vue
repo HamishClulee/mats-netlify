@@ -6,7 +6,7 @@
                 target="_blank"
                 class="icon-container-item">
                 <img
-                    src="https://more-art-than.science/images/github.svg"
+                    src="/images/github.svg"
                     height="30"
                 />
             </a>
@@ -15,7 +15,7 @@
                 target="_blank"
                 class="icon-container-item">
                 <img
-                    src="https://more-art-than.science/images/linkedin.svg"
+                    src="/images/linkedin.svg"
                     height="30"
                 />
             </a>

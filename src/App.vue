@@ -1,19 +1,13 @@
 <template>
   <div class="god-div"></div>
+  <MatsNav></MatsNav>
+  <router-view></router-view>
 </template>
 
 <script>
+import MatsNav from "./components/MatsNav.vue";
 export default {
   name: "App",
-  data() {
-    return {
-      canvasopen: false,
-    };
-  },
-  mounted() {
-    this.$on("close-canvas", () => {
-      this.canvasopen = false;
-    });
-  },
+  components: { MatsNav },
 };
 </script>

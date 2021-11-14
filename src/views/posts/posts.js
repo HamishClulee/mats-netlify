@@ -11,9 +11,9 @@ const ROUTER_NAME = 'post'
 
 export const posts = [
     {
-        linkto: { 
+        linkto: {
             name: ROUTER_NAME,
-            params: { 
+            params: {
                 urlname: 'one-build-system-to-rule-them',
                 mdfilename: 'sharedcode.md'
             }
@@ -23,9 +23,9 @@ export const posts = [
         brief: 'How to achieve this and how to maintain developer experience while doing so. One linter, one typescript config, one build system for all your frontend reporsitories and a shared compnents/files directory within the same ecosystem.',
     },
     {
-        linkto: { 
+        linkto: {
             name: ROUTER_NAME,
-            params: { 
+            params: {
                 urlname: 'wildcard-subdomains',
                 mdfilename: 'wildcard.md'
             }
@@ -35,9 +35,9 @@ export const posts = [
         brief: 'A quick explanation of the steps I took to get wildcard subdomains working for welcomeqr.codes',
     },
     {
-        linkto: { 
+        linkto: {
             name: ROUTER_NAME,
-            params: { 
+            params: {
                 urlname: 'tips-for-new-players',
                 mdfilename: 'tipsfornewplayers.md'
             }
@@ -47,9 +47,9 @@ export const posts = [
         brief: 'Some common mistakes I observe from juniors devs and how to correct them, primarily focused on VueJs applications.',
     },
     {
-        linkto: { 
+        linkto: {
             name: ROUTER_NAME,
-            params: { 
+            params: {
                 urlname: 'style-organisation-in-chaotic-places',
                 mdfilename: 'betterstyles.md',
             }

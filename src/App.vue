@@ -1,5 +1,19 @@
 <template>
-  <div class="bg-gray-500 h-32 w-full"></div>
+  <div class="god-div"></div>
 </template>
 
-<style></style>
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      canvasopen: false,
+    };
+  },
+  mounted() {
+    this.$on("close-canvas", () => {
+      this.canvasopen = false;
+    });
+  },
+};
+</script>

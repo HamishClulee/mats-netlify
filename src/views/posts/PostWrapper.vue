@@ -13,7 +13,7 @@ import Prism from "prismjs";
 import NavFoot from "../../components/NavFoot.vue";
 
 export default {
-  name: "betterstyles",
+  name: "PostWrapper",
   components: {
     NavFoot,
   },

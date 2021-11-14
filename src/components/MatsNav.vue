@@ -1,8 +1,6 @@
 <template>
   <div class="navbar-con">
-    <div class="navbar-left">
-      <AnimateWord class="svg-actual"></AnimateWord>
-    </div>
+    <div class="navbar-left">Hamish Clulee</div>
     <div class="navbar-right">
       <div class="text-item" :class="checkvis('home') ? 'active-route' : ''">
         <router-link :to="{ path: '/' }">home</router-link>
@@ -30,29 +28,29 @@
         </div>
         <div
           class="canvas-item"
-          @click="togglecanvas"
           :class="checkvis('home') ? 'active-route canvas' : ''"
+          @click="togglecanvas"
         >
           <router-link :to="{ path: '/' }">home</router-link>
         </div>
         <div
           class="canvas-item"
-          @click="togglecanvas"
           :class="checkvis('cv') ? 'active-route canvas' : ''"
+          @click="togglecanvas"
         >
           <router-link :to="{ path: '/cv' }">CV</router-link>
         </div>
         <div
           class="canvas-item"
-          @click="togglecanvas"
           :class="checkvis('work') ? 'active-route canvas' : ''"
+          @click="togglecanvas"
         >
           <router-link :to="{ path: '/work' }">Projects</router-link>
         </div>
         <div
           class="canvas-item"
-          @click="togglecanvas"
           :class="checkvis('blog') ? 'active-route canvas' : ''"
+          @click="togglecanvas"
         >
           <router-link :to="{ path: '/blog' }">blog</router-link>
         </div>
@@ -61,26 +59,22 @@
   </div>
 </template>
 <script>
-import AnimateWord from "./AnimateWord.vue";
 export default {
-  name: "navbar",
-  components: {
-    AnimateWord,
-  },
+  name: 'NavBar',
   data() {
     return {
       canvasopen: false,
-    };
+    }
   },
   methods: {
     togglecanvas() {
-      this.canvasopen = !this.canvasopen;
+      this.canvasopen = !this.canvasopen
     },
     routehome() {
-      this.$router.push({ path: "/" });
+      this.$router.push({ path: "/" })
     },
     checkvis(item) {
-      return item === this.$route.name;
+      return item === this.$route.name
     },
   },
 };

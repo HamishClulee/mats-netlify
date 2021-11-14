@@ -1,6 +1,6 @@
 <template>
   <section class="bloglink-con">
-    <router-link :to="linkto" tag="h4">{{ posttitle }}</router-link>
+    <router-link :to="linkto">{{ posttitle }}</router-link>
     <div class="date">{{ date }}</div>
     <p class="short-des">{{ brief }}</p>
   </section>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "bloglink",
+  name: "BlogLink",
   props: {
     linkto: {
       type: Object,

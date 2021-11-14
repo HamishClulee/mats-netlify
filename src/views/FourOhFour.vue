@@ -9,19 +9,19 @@
 </template>
 
 <script>
-    export default {
-        name: 'PageNotFound',
-        data () {
-            return {
-            }
-        },
-        mounted () {
-        },
-        methods: {
-        },
-        computed: {
+export default {
+    name: 'PageNotFound',
+    data () {
+        return {
         }
-    }
+    },
+    computed: {
+    },
+    mounted () {
+    },
+    methods: {
+    },
+}
 </script>
 <style scoped>
     .text-color-control {

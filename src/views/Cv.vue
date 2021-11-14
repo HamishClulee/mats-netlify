@@ -1,5 +1,5 @@
 <template>
-  <div class="cv-con" id="print-vis-on">
+  <div id="print-vis-on" class="cv-con">
     <h1 class="main">Hamish Clulee</h1>
     <h2>BSc, Software Engineering, University of Otago</h2>
     <h3>References upon request</h3>
@@ -46,17 +46,17 @@
       </div>
     </div>
     <mark class="divider">~</mark>
-    <div class="job-con" v-for="(v, i) in jobs" :key="i">
+    <div v-for="(v, i) in jobs" :key="i" class="job-con">
       <h2>{{ v.employer }}</h2>
       <h3>{{ v.title }}</h3>
       <h5>{{ v.dates }}</h5>
-      <h6 class="refs" v-if="v.references">References available</h6>
+      <h6 v-if="v.references" class="refs">References available</h6>
       <p
         v-for="(p, x) in v.description"
         :key="x"
-        v-html="p"
         class="des-para"
         :class="x === 0 ? 'first-des-para' : ''"
+        v-html="p"
       ></p>
       <mark class="divider">~</mark>
     </div>
@@ -67,7 +67,7 @@
 <script>
 import NavFoot from "../components/NavFoot.vue";
 export default {
-  name: "cv",
+  name: "CvPage",
   components: {
     NavFoot,
   },

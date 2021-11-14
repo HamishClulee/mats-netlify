@@ -22,19 +22,19 @@
       allowFullScreen
     ></iframe>
     <mark class="divider">~</mark>
-    <navfoot></navfoot>
+    <NavFoot></NavFoot>
   </div>
 </template>
 
 <script>
 import { posts } from "./posts/posts.js";
 import BlogLink from "../components/BlogLink.vue";
-import navfoot from "../components/navfoot.vue";
+import NavFoot from "../components/NavFoot.vue";
 export default {
-  name: "blog",
+  name: "BlogList",
   components: {
     BlogLink,
-    navfoot,
+    NavFoot,
   },
   data() {
     return {

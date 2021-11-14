@@ -15,8 +15,8 @@ export const posts = [
             name: ROUTER_NAME,
             params: {
                 urlname: 'one-build-system-to-rule-them',
-                mdfilename: 'sharedcode.md'
-            }
+                mdfilename: 'sharedcode.md',
+            },
         },
         title: 'One Build System - Multiple Apps - Shared Components',
         date: '12 Sept 2020',
@@ -27,8 +27,8 @@ export const posts = [
             name: ROUTER_NAME,
             params: {
                 urlname: 'wildcard-subdomains',
-                mdfilename: 'wildcard.md'
-            }
+                mdfilename: 'wildcard.md',
+            },
         },
         title: 'Wildcard subdomains on digitalocean using Express and Nginx with Let\'s Encrypt for SSL.',
         date: '29 Aug 2020',
@@ -39,8 +39,8 @@ export const posts = [
             name: ROUTER_NAME,
             params: {
                 urlname: 'tips-for-new-players',
-                mdfilename: 'tipsfornewplayers.md'
-            }
+                mdfilename: 'tipsfornewplayers.md',
+            },
         },
         title: 'Tips For New VueJs Players',
         date: '29 Aug 2020',
@@ -52,7 +52,7 @@ export const posts = [
             params: {
                 urlname: 'style-organisation-in-chaotic-places',
                 mdfilename: 'betterstyles.md',
-            }
+            },
         },
         title: 'Organising Style Out Of Chaos',
         date: '9 May 2020',

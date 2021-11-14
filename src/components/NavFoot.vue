@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "navfoot",
+  name: "NavFoot",
   methods: {
     checkvis(name) {
       return this.$route.name !== name;

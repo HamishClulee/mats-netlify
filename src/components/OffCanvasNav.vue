@@ -7,16 +7,16 @@
 
     <div class="canvas-text-con">
       <div class="canvas-item" @click="close">
-        <router-link tag="h2" :to="{ path: '/' }">home</router-link>
+        <router-link :to="{ path: '/' }">home</router-link>
       </div>
       <div class="canvas-item" @click="close">
-        <router-link tag="h2" :to="{ path: '/work' }">projects</router-link>
+        <router-link :to="{ path: '/work' }">projects</router-link>
       </div>
       <div class="canvas-item" @click="close">
-        <router-link tag="h2" :to="{ path: '/cv' }">cv</router-link>
+        <router-link :to="{ path: '/cv' }">cv</router-link>
       </div>
       <div class="canvas-item" @click="close">
-        <router-link tag="h2" :to="{ path: '/blog' }">blog</router-link>
+        <router-link :to="{ path: '/blog' }">blog</router-link>
       </div>
       <div class="canvas-item email">
         <h3>hamish.clulee@gmail.com</h3>
@@ -42,7 +42,7 @@
 </template>
 <script>
 export default {
-  name: "canvasnav",
+  name: "OffCamvasNav",
   methods: {
     close() {
       this.$parent.$emit("close-canvas");

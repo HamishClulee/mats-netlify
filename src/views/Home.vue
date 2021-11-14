@@ -1,7 +1,6 @@
 <template>
   <div class="home-con">
     <div class="avatar-container">
-      <AnimateAvatar></AnimateAvatar>
       <div class="avatar-text-container">
         <h1>Technical Lead</h1>
         <h3>Specialised in VueJs.</h3>
@@ -40,13 +39,10 @@
     </div>
   </div>
 </template>
+``
 
 <script>
-import AnimateAvatar from "../components/AnimateAvatar.vue";
 export default {
-  name: "home",
-  components: {
-    AnimateAvatar,
-  },
+  name: "HomePage",
 };
 </script>

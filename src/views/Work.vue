@@ -103,7 +103,7 @@
 <script>
 import FeatureCard from "../components/FeatureCard.vue";
 export default {
-  name: "work",
+  name: "WorkPage",
   components: { FeatureCard },
   data() {
     return {

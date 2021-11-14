@@ -15,14 +15,32 @@
 
 <script>
 export default {
-  name: "featurecard",
+  name: "FeatureCard",
   props: {
-    image: String,
-    title: String,
-    sub: String,
-    text: Array,
-    aref: String,
-    noclick: Boolean,
+    image: {
+      type: String,
+      default: "",
+    },
+    title: {
+      type: String,
+      default: "",
+    },
+    sub: {
+      type: String,
+      default: "",
+    },
+    text: {
+      type: Array,
+      default: () => [],
+    },
+    aref: {
+      type: String,
+      default: "",
+    },
+    noclick: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     shorttext() {

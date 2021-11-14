@@ -8,7 +8,7 @@
 
     <div class="content">
       <div class="two-col">
-        <div @click="openmodal" class="img-grid">
+        <div class="img-grid" @click="openmodal">
           <figure
             v-for="(v, i) in images"
             :key="i"
@@ -56,15 +56,36 @@
 
 <script>
 export default {
-  name: "worksum",
+  name: "WorkSumarry",
   props: {
-    images: Array,
-    title: String,
-    sub: String,
-    text: Array,
-    islive: Boolean,
-    aref: String,
-    tech: Object,
+    images: {
+      type: Array,
+      default: () => [],
+    },
+    title: {
+      type: String,
+      default: "",
+    },
+    sub: {
+      type: String,
+      default: "",
+    },
+    text: {
+      type: Array,
+      default: () => [],
+    },
+    islive: {
+      type: Boolean,
+      default: false,
+    },
+    aref: {
+      type: String,
+      default: "",
+    },
+    tech: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   methods: {
     openmodal() {

@@ -27,13 +27,14 @@
 import anime from "animejs";
 import { NODE } from "../axios";
 export default {
-  name: "underconstruction",
+  name: "UnderConstruction",
   data() {
     return {
       email: "",
       message: "",
     };
   },
+  computed: {},
   mounted() {
     anime.timeline().add({
       targets: ".animate-me .letter",
@@ -60,6 +61,5 @@ export default {
       }
     },
   },
-  computed: {},
 };
 </script>

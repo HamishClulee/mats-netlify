@@ -1,6 +1,6 @@
 <template>
   <div class="font-body"></div>
-  <MatsNav></MatsNav>
+  <MatsNav v-if="$route.name !== 'Home'"></MatsNav>
   <router-view></router-view>
 </template>
 

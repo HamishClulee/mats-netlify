@@ -6,13 +6,18 @@ module.exports = {
       sans: ['Inter', 'sans-serif'],
       display: ['Libre Baskerville', 'serif'],
     },
-    colors: {
-      primary: '#fbc02d',
-      secondary: '#00bfa5',
-      tertiary: '#ff5722',
-      highlight: '#03A9F4',
+    extend: {
+      colors: {
+        primary: '#fbc02d',
+        secondary: '#00bfa5',
+        tertiary: '#ff5722',
+        highlight: '#03A9F4',
+      },
+      animation: {
+        'slide-up': '1.5s ease-in-out 0.5s slide-up both',
+        'slide-down': 'slide-up 2s ease',
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {},

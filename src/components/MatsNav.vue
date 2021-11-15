@@ -1,80 +1,105 @@
 <template>
-  <div class="navbar-con">
-    <div class="navbar-left">Hamish Clulee</div>
-    <div class="navbar-right">
-      <div class="text-item" :class="checkvis('home') ? 'active-route' : ''">
-        <router-link :to="{ path: '/' }">home</router-link>
+  <div>
+    <div class="flex w-full h-16 border-grey-100 border-b items-center">
+      <div class="hidden md:flex w-full">
+        <div class="w-1/3 flex justify-start">Hamish Clulee</div>
+        <div class="w-2/3 flex justify-end">
+          <div
+            v-for="({ name, route, text }, index) in routes"
+            :key="index"
+            class="mx-8"
+            :class="checkvis(name) ? 'active-route' : ''"
+          >
+            <router-link :to="{ path: route }">{{ text }}</router-link>
+          </div>
+        </div>
       </div>
-      <div class="text-item" :class="checkvis('cv') ? 'active-route' : ''">
-        <router-link :to="{ path: '/cv' }">CV</router-link>
+
+      <!-- hamburger -->
+      <div
+        v-if="!isCanvasOpen"
+        class="w-full h-16 mr-6 flex flex-col justify-center items-end md:hidden"
+        @click="toggleCanvas"
+      >
+        <div
+          v-for="(_, index) in Array(3)"
+          :key="index"
+          class="h-0.5 my-0.5 w-6 bg-gray-500"
+        ></div>
       </div>
-      <div class="text-item" :class="checkvis('work') ? 'active-route' : ''">
-        <router-link :to="{ path: '/work' }">projects</router-link>
-      </div>
-      <div class="text-item" :class="checkvis('blog') ? 'active-route' : ''">
-        <router-link :to="{ path: '/blog' }">blog</router-link>
+
+      <div
+        v-else
+        class="w-full h-16 mr-6 flex flex-col justify-center items-end md:hidden"
+        @click="toggleCanvas"
+      >
+        <div class="h-0.5 w-6 bg-gray-500 transform origin-center rotate-45"></div>
+        <div
+          class="h-0.5 w-6 bg-gray-500 relative transform origin-center -rotate-45"
+          style="bottom: 2px"
+        ></div>
       </div>
     </div>
-    <div class="hamburger" @click="togglecanvas">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <div v-if="canvasopen" class="canvas-nav">
+
+    <!-- canvas transform origin-center -rotate-45 -->
+    <div
+      v-if="isCanvasOpen"
+      class="flex mt-16 bg-white w-full h-screen absolute inset-x-0 inset-y-0 justify-end"
+    >
       <div class="canvas-text-con">
-        <div class="big-x" @click="togglecanvas">
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
         <div
-          class="canvas-item"
-          :class="checkvis('home') ? 'active-route canvas' : ''"
-          @click="togglecanvas"
+          v-for="({ name, route, text }, index) in routes"
+          :key="index"
+          class="mr-8 my-4"
+          :class="checkvis(name) ? 'active-route canvas' : ''"
+          @click="toggleCanvas"
         >
-          <router-link :to="{ path: '/' }">home</router-link>
-        </div>
-        <div
-          class="canvas-item"
-          :class="checkvis('cv') ? 'active-route canvas' : ''"
-          @click="togglecanvas"
-        >
-          <router-link :to="{ path: '/cv' }">CV</router-link>
-        </div>
-        <div
-          class="canvas-item"
-          :class="checkvis('work') ? 'active-route canvas' : ''"
-          @click="togglecanvas"
-        >
-          <router-link :to="{ path: '/work' }">Projects</router-link>
-        </div>
-        <div
-          class="canvas-item"
-          :class="checkvis('blog') ? 'active-route canvas' : ''"
-          @click="togglecanvas"
-        >
-          <router-link :to="{ path: '/blog' }">blog</router-link>
+          <router-link :to="{ path: route }">{{ text }}</router-link>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   data() {
     return {
-      canvasopen: false,
-    }
+      isCanvasOpen: false,
+      routes: [
+        {
+          name: "Home",
+          route: "/",
+          text: "home",
+        },
+        {
+          name: "Cv",
+          route: "/cv",
+          text: "CV",
+        },
+        {
+          name: "Work",
+          route: "/work",
+          text: "work",
+        },
+        {
+          name: "Blog",
+          route: "/blog",
+          text: "blog",
+        },
+      ],
+    };
   },
   methods: {
-    togglecanvas() {
-      this.canvasopen = !this.canvasopen
+    toggleCanvas() {
+      this.isCanvasOpen = !this.isCanvasOpen;
     },
     routehome() {
-      this.$router.push({ path: "/" })
+      this.$router.push({ path: "/" });
     },
     checkvis(item) {
-      return item === this.$route.name
+      return item === this.$route.name;
     },
   },
 };

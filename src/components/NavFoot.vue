@@ -1,6 +1,6 @@
 <template>
-  <div class="foot-con">
-    <div class="header-icons-home">
+  <div class="w-full flex items-center justify-center">
+    <div class="w-1/3 flex flex-row justify-between">
       <a
         href="https://github.com/HamishClulee"
         target="_blank"

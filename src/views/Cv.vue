@@ -1,5 +1,6 @@
 <template>
-  <div id="print-vis-on" class="cv-con">
+  <!-- eslint-disable vue/no-v-html -->
+  <div class="cv-con">
     <h1 class="main">Hamish Clulee</h1>
     <h2>BSc, Software Engineering, University of Otago</h2>
     <h3>References upon request</h3>

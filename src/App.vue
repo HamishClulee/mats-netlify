@@ -1,5 +1,5 @@
 <template>
-  <div class="god-div"></div>
+  <div class="font-body"></div>
   <MatsNav></MatsNav>
   <router-view></router-view>
 </template>

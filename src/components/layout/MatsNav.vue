@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex w-full h-16 border-grey-100 border-b items-center">
+    <div class="flex w-full h-16 border-primary border-b items-center">
       <div class="hidden md:flex w-full">
         <div class="w-1/3 flex justify-start">Hamish Clulee</div>
         <div class="w-2/3 flex justify-end">

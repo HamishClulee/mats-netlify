@@ -1,5 +1,6 @@
 <template>
   <main class="post-wrapper">
+    <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="post-container" v-html="markdown" />
     <NavFoot></NavFoot>
   </main>

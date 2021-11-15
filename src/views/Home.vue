@@ -1,13 +1,16 @@
 <template>
   <div class="">
-    <div class="min-h-screen">
-      <p>Passionate about complex UI's, sharpening pencils and all things Javascript.</p>
-      <p>
+    <div class="flex items-start justify-center flex-col px-12 py-32">
+      <h1 class="font-display text-3xl text-secondary">Hi, I'm Hamish</h1>
+      <p class="text-xl">
+        Passionate about complex UI's, sharpening pencils and all things Javascript.
+      </p>
+      <p class="text-xl">
         I've learned that the simple things are the most important, focusing on the basics
         and building solid foundations is the key. Complexity is unavoidable, the goal is
         to solve the problem without making it worse.
       </p>
-      <p>
+      <p class="text-xl">
         A big believer that attitude is the main ingredient in creating good devs and
         great teams, that attitude can be fostered and that teaching is the most effective
         way to continue learning.

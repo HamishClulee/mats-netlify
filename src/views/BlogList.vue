@@ -28,8 +28,8 @@
 
 <script>
 import { posts } from "./posts/posts.js";
-import BlogLink from "../components/BlogLink.vue";
-import NavFoot from "../components/NavFoot.vue";
+import BlogLink from "../components/blog/BlogLink.vue";
+import NavFoot from "../components/layout/NavFoot.vue";
 export default {
   name: "BlogList",
   components: {

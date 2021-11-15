@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import MatsNav from './components/MatsNav.vue'
+import MatsNav from "./components/layout/MatsNav.vue";
 export default {
-    name: 'App',
-    components: { MatsNav },
-}
+  name: "App",
+  components: { MatsNav },
+};
 </script>

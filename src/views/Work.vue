@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import FeatureCard from "../components/FeatureCard.vue";
+import FeatureCard from "../components/cards/FeatureCard.vue";
 export default {
   name: "WorkPage",
   components: { FeatureCard },

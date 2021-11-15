@@ -10,7 +10,7 @@ import { posts } from "./posts.js";
 
 import Prism from "prismjs";
 
-import NavFoot from "../../components/NavFoot.vue";
+import NavFoot from "../../components/layout/NavFoot.vue";
 
 export default {
   name: "PostWrapper",

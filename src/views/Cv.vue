@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import NavFoot from "../components/NavFoot.vue";
+import NavFoot from "../components/layout/NavFoot.vue";
 export default {
   name: "CvPage",
   components: {

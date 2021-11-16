@@ -1,16 +1,20 @@
 <template>
   <div ref="content" class="flex flex-col">
     <SlideUpContainer>
-      <div class="flex items-start justify-center flex-col py-64 px-40 max-w-3xl">
-        <h1 class="font-display text-6xl text-secondary mb-2">Hi, I'm Hamish</h1>
+      <div class="flex items-start justify-center flex-col py-64 px-40 max-w-6xl">
+        <h1 class="font-display text-6xl text-secondary mb-4">Hi, I'm Hamish</h1>
         <h3 class="text-3xl text-primary mb-4">
           An Engineer commited to simplicity, ease of maintainece and beauty in
           <code>function.</code>
         </h3>
+
         <p class="text-xl">
-          Simple things are the key to unlocking a world where your software serves you
-          and your business. Complexity is unavoidable, the goal is to solve the problem
-          without making it worse.
+          If you'd like to know more about me, you can checkout my
+          <router-link class="underline text-primary" to="/blog">blog</router-link>, my
+          <router-link class="underline text-secondary" to="/cv">CV</router-link>
+          and some info on the
+          <router-link class="underline text-tertiary" to="/work">work</router-link>
+          I've done over the last few years.
         </p>
       </div>
     </SlideUpContainer>

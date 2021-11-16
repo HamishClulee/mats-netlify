@@ -5,9 +5,9 @@
         <!-- image contained -->
       </section>
       <section class="content-container">
-        <h3>{{ title }}</h3>
-        <h5>{{ sub }}</h5>
-        <p>{{ shorttext }}</p>
+        <h3 class="text-xl">{{ title }}</h3>
+        <h5 class="text-primary">{{ sub }}</h5>
+        <slot />
       </section>
     </article>
   </a>
@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .card-container {
   margin: 10px;
   background: #fff;
@@ -73,24 +73,5 @@ export default {
 .content-container {
   padding: 10px;
   min-height: 375px;
-}
-.content-container p {
-  font-size: 1em;
-}
-.content-container h3 {
-  font-size: 2em;
-}
-.content-container h5 {
-  font-size: 1.6em;
-}
-.button-container {
-  border-top: 1px solid #adadad;
-}
-.button-container .card-button {
-  border: none;
-}
-.middle {
-  border-left: 1px solid #adadad;
-  border-right: 1px solid #adadad;
 }
 </style>

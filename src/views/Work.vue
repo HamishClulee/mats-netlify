@@ -1,71 +1,75 @@
 <template>
   <div class="work-con">
-    <h1>Current Projects</h1>
+    <h1 class="text-4xl font-display text-secondary mb-8">Current Projects</h1>
 
-    <section class="cards-container">
-      <FeatureCard
-        title="Hue"
-        sub="OSS"
-        :image="hue_img"
-        :text="hue_txt"
-        aref="https://github.com/HamishClulee"
-      ></FeatureCard>
+    <SlideUpContainer>
+      <section class="cards-container">
+        <FeatureCard
+          title="Hue"
+          sub="OSS"
+          :image="hue_img"
+          :text="hue_txt"
+          aref="https://github.com/HamishClulee"
+        ></FeatureCard>
 
-      <FeatureCard
-        title="Welcome QR"
-        sub="Web App"
-        :image="qr_img"
-        :text="qr_txt"
-        aref="https://github.com/HamishClulee/welcomeqr.codes"
-      ></FeatureCard>
+        <FeatureCard
+          title="Welcome QR"
+          sub="Web App"
+          :image="qr_img"
+          :text="qr_txt"
+          aref="https://github.com/HamishClulee/welcomeqr.codes"
+        ></FeatureCard>
 
-      <FeatureCard
-        title="Create MEVN App"
-        sub="OSS"
-        :image="mevn_img"
-        :text="mevn_txt"
-        aref="https://github.com/HamishClulee/create-mevn-app"
-      ></FeatureCard>
-    </section>
+        <FeatureCard
+          title="Create MEVN App"
+          sub="OSS"
+          :image="mevn_img"
+          :text="mevn_txt"
+          aref="https://github.com/HamishClulee/create-mevn-app"
+        ></FeatureCard>
+      </section>
+    </SlideUpContainer>
 
     <mark class="divider">~</mark>
 
-    <h1>Older Projects</h1>
-    <h5>
+    <h1 class="text-4xl font-display text-secondary mb-4">Older Projects</h1>
+    <h5 class="mb-8">
       If you see a GIF, its because an image link is broken, don't worry, I'm on it!
     </h5>
 
-    <section class="cards-container">
-      <FeatureCard
-        title="Dashboard Builder"
-        sub="Web App"
-        :image="dbbimg"
-        :text="dbb_txt"
-      ></FeatureCard>
+    <SlideUpContainer>
+      <section class="cards-container">
+        <FeatureCard
+          title="Dashboard Builder"
+          sub="Web App"
+          :image="dbbimg"
+          :text="dbb_txt"
+        ></FeatureCard>
 
-      <FeatureCard
-        title="Netograph"
-        sub="Web App"
-        :image="netimg"
-        :text="neto_txt"
-        aref="https://netograph.io"
-      ></FeatureCard>
+        <FeatureCard
+          title="Netograph"
+          sub="Web App"
+          :image="netimg"
+          :text="neto_txt"
+          aref="https://netograph.io"
+        ></FeatureCard>
 
-      <FeatureCard
-        title="Baby Aid NZ"
-        sub="Web App"
-        :image="babimg"
-        :text="babyaid_txt"
-        :aref="null"
-      ></FeatureCard>
+        <FeatureCard
+          title="Baby Aid NZ"
+          sub="Web App"
+          :image="babimg"
+          :text="babyaid_txt"
+          :aref="null"
+        ></FeatureCard>
 
-      <FeatureCard
-        title="@RONIN"
-        sub="Website"
-        :image="roninimg"
-        :text="ronin_txt"
-      ></FeatureCard>
-    </section>
+        <FeatureCard
+          title="@RONIN"
+          sub="Website"
+          :image="roninimg"
+          :text="ronin_txt"
+        ></FeatureCard>
+      </section>
+    </SlideUpContainer>
 
     <mark class="divider">~</mark>
 
@@ -87,10 +91,11 @@
 
 <script>
 import FeatureCard from "../components/cards/FeatureCard.vue";
+import SlideUpContainer from "../components/animate/SlideUpContainer.vue";
 import NavFoot from "../components/layout/NavFoot.vue";
 export default {
   name: "WorkPage",
-  components: { FeatureCard, NavFoot },
+  components: { FeatureCard, NavFoot, SlideUpContainer },
   data() {
     return {
       hue_txt: [

@@ -1,16 +1,14 @@
 <template>
   <div class="list-con">
-    <h1>Blog Posts</h1>
+    <h1 class="text-4xl mb-8 text-secondary font-display">Blog Posts</h1>
 
     <mark class="divider">~</mark>
-    <BlogLink
-      v-for="(post, index) in posts"
-      :key="index"
-      :posttitle="post.title"
-      :date="post.date"
-      :brief="post.brief"
-      :linkto="post.linkto"
-    ></BlogLink>
+
+    <h1 class="text-2xl mb-8 text-highlight font-display">
+      Ooof, this area is still under construction. Come back though, it's going to be
+      crackers!
+    </h1>
+
     <mark class="divider">~</mark>
     <h4>No More Posts.</h4>
     <iframe
@@ -48,3 +46,16 @@ export default {
   },
 };
 </script>
+<style scoped>
+.list-con {
+  margin: 70px auto;
+  margin-top: 70px;
+  min-width: 300px;
+  width: 95%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+</style>

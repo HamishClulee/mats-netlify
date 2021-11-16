@@ -81,30 +81,16 @@
 
     <mark class="divider">~</mark>
 
-    <div class="header-icons-home">
-      <a
-        href="https://github.com/HamishClulee"
-        target="_blank"
-        class="icon-container-item"
-      >
-        <img src="/images/github.svg" height="30" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/hamish-clulee/"
-        target="_blank"
-        class="icon-container-item"
-      >
-        <img src="/images/linkedin.svg" height="30" />
-      </a>
-    </div>
+    <NavFoot />
   </div>
 </template>
 
 <script>
 import FeatureCard from "../components/cards/FeatureCard.vue";
+import NavFoot from "../components/layout/NavFoot.vue";
 export default {
   name: "WorkPage",
-  components: { FeatureCard },
+  components: { FeatureCard, NavFoot },
   data() {
     return {
       hue_txt: [
@@ -116,10 +102,11 @@ export default {
       ],
       qr_txt: [
         `Originally WelcomeQR was being built as product to be used in the tourism
-                sector. With the advent of Covid, and it's subsequent devastation of said industry,
+                sector. With the advent of Covid, and it's sub
+sequent devastation of said industry,
                 it has become a place to validate new dev ideas for usage in other current projects;
                 Create-MEVN and Hue. `,
-        `Very much still in development, but the GitHub repo is a good example of recent
+        `Very { FeatureCard, NavFoot }evelopment, but the GitHub repo is a good example of recent
                 code I've written.`,
       ],
       mevn_txt: [
@@ -172,3 +159,80 @@ export default {
   },
 };
 </script>
+
+<style>
+h1 {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 0px) and (max-width: 620px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+h5 {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 0px) and (max-width: 620px) {
+  h5 {
+    font-size: 1.2em;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+.work-con {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 90px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.header-icons {
+  margin: 30px;
+}
+
+.header-icons-home {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  text-align: center;
+  text-align: left;
+}
+.header-icons-home img {
+  height: 50px;
+}
+@media (min-width: 0px) and (max-width: 620px) {
+  .header-icons-home img {
+    height: 30px;
+  }
+}
+@media (min-width: 0px) and (max-width: 520px) {
+  .header-icons-home {
+    margin-top: 15px;
+  }
+}
+
+.icon-container-item {
+  margin: 20px;
+}
+</style>

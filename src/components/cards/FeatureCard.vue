@@ -49,3 +49,48 @@ export default {
   },
 };
 </script>
+
+<style>
+.card-container {
+  margin: 10px;
+  background: #fff;
+  color: #616161;
+  transition: box-shadow 135ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
+  transition: width 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 3px;
+  z-index: 1;
+  width: 95%;
+  max-width: 400px;
+}
+.image-container {
+  border-bottom: 1px solid #adadad;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  background-size: cover;
+  height: 250px;
+}
+.content-container {
+  padding: 10px;
+  min-height: 375px;
+}
+.content-container p {
+  font-size: 1em;
+}
+.content-container h3 {
+  font-size: 2em;
+}
+.content-container h5 {
+  font-size: 1.6em;
+}
+.button-container {
+  border-top: 1px solid #adadad;
+}
+.button-container .card-button {
+  border: none;
+}
+.middle {
+  border-left: 1px solid #adadad;
+  border-right: 1px solid #adadad;
+}
+</style>

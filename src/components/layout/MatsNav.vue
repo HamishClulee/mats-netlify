@@ -2,15 +2,12 @@
   <div class="">
     <div class="flex w-full h-16 items-center">
       <div class="hidden md:flex w-full">
-        <div class="w-1/3 flex justify-start">Hamish Clulee</div>
+        <div class="w-1/3 flex justify-start"></div>
         <div class="w-2/3 flex justify-end">
-          <div
-            v-for="({ name, route, text }, index) in routes"
-            :key="index"
-            class="mx-8"
-            :class="checkvis(name) ? 'active-route' : ''"
-          >
-            <router-link :to="{ path: route }">{{ text }}</router-link>
+          <div v-for="({ route, text }, index) in routes" :key="index" class="mx-8">
+            <router-link class="nav-bar-link" :to="{ path: route }">{{
+              text
+            }}</router-link>
           </div>
         </div>
       </div>
@@ -104,3 +101,19 @@ export default {
   },
 };
 </script>
+
+<style>
+.nav-bar-link {
+  @apply uppercase text-lg text-gray-500;
+}
+.router-link-active::after {
+  display: flex;
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: #fbc02d;
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+</style>

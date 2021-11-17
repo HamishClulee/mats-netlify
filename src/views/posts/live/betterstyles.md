@@ -19,10 +19,10 @@ Next let’s quickly ensure everyone understands CSS Specificity, then we can ta
 The image below is a pretty good visual representation of the point I'm trying to make.
 
 ![CSS Specificity](/images/css.png "Diagram displaying CSS Specificity")
-                  
+
 The aim of the list - _the order of imports in your entry point_ - is to place all of the vendor and pre-processed styles in the user-agent category seen in the image above, and have the vendor styles placed in the hieracy so they can be overridden without any problems. If the vendor has written questionable CSS - no problem - it's easy to override. I am aware that the image and the examples I'm providing do not share a 1:1 relationship, bear with and try to take a higher level view at this point, things will become clear as you read on. Think about the following examples:
 
-```scss
+```css
 // main.css
 .page-container {
     width: 98%;
@@ -239,7 +239,7 @@ So following on from the ideas above, the styles I'm about to talk about will be
 
 Here is the list of style instances that you will end up using in a typical `vue-cli` codebase, in the same format as the image - lower in the list will override items higher in the list.
 
-1. Styles written inside Vue `scoped` style blocks. 
+1. Styles written inside Vue `scoped` style blocks.
 > Don't forget that anything written in `scoped` style block will not apply to things like `v-html` content, or any html added dynamically via javascript (useless you are crafty and scrape the `v-data` attribute from the component, and apply it to every node of dynamic html)
 2. Inline styles written on HTML elements using the standard HTML syntax, but in our case this would most likely become styles added by the Vue `style` attribute.
 3. Styles written via Javscript.
@@ -247,7 +247,7 @@ Here is the list of style instances that you will end up using in a typical `vue
 
 Which should bring us to a place where the traditional model - _shown in the hieracy image above_ - is now replaced by our new paradigm.
 
-> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use `!important` or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have a slighly different syntax) and finally styles written via Javascript. 
+> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use `!important` or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have a slighly different syntax) and finally styles written via Javascript.
 
 ### A Note On Performance In Dev Envs
 

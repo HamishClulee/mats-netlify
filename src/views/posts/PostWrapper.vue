@@ -1,7 +1,7 @@
 <template>
   <main class="post-wrapper">
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="post-container" v-html="markdown" />
+    <div ref="html-container" class="p-8" v-html="markdown" />
     <!-- <Tester /> -->
     <NavFoot></NavFoot>
   </main>
@@ -24,13 +24,27 @@ export default {
       markdown: null,
     };
   },
-  created() {
+  async created() {
     if (this.getMDFileName()) {
       import(`./live/${this.getMDFileName()}`)
         .then((res) => {
           this.markdown = res.default;
         })
-        .then(() => Prism.highlightAll())
+        .then(() => {
+          const codeBlocks = this.$refs["html-container"].getElementsByTagName("code");
+
+          for (let block of codeBlocks) {
+            console.log(block.innerHTML);
+            if (block.innerHTML.includes("&lt;&lt;&lt;javascript&gt;&gt;&gt;")) {
+              block.classList.add("language-javascript");
+              block.innerHTML = block.innerHTML.replace(
+                "&lt;&lt;&lt;javascript&gt;&gt;&gt;",
+                ""
+              );
+            }
+          }
+          Prism.highlightAll();
+        })
         .catch((err) => console.log("***", err));
     }
   },
@@ -50,7 +64,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 pre {
   font-family: "Lucida Console", Monaco, monospace;
   line-height: 1.7;

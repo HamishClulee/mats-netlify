@@ -5,8 +5,6 @@ import remarkHtml from 'vite-remark-html'
 export default defineConfig({
   plugins: [
     Vue(),
-    remarkHtml({
-      exclude: /\/node_modules\//,
-    }),
+    remarkHtml(),
   ],
 })

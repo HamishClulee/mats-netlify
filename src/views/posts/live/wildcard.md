@@ -133,18 +133,19 @@ CORS is a hardship. I had a whitelist, a regex and `isDev` switch before I start
 
 Bascially the browser isn't happy with HTTP requests being fired from a subdomain to a domain without a header named `Access-Control-Allow-Origin` which matches the origin of the request, where the origin matches the domain and the subdomain. Which is fine if you have a couple of subdomains hardcoded, but if you want the power of the *, then a little extra hackery is required.
 
-```javascript
-// expressjs CORS package
-  created() {
+```
+<<<javascript>>>
+created() {
     if (this.getMDFileName()) {
-      import(`./live/${this.getMDFileName()}`)
+    import(`./live/${this.getMDFileName()}`)
         .then((res) => {
-          this.markdown = res.default;
+        this.markdown = res.default;
         })
         .then(() => Prism.highlightAll())
     }
-  },
+}
 ```
+
 That's it for CORS really, you could do this at the Nginx level as well, but for me this made more sence and does the job well. I can hear confused screaming coming from the security nerds "But now someone can run whatever Javascript they want on a published subdomain, and everyone could die!"
 
 That is true, but all my endpoints are locked up with `httpOnly` cookies and JWT tokens, also all inputs are santised. I think we are safe, and that tinfoil hat looks a little silly on you.

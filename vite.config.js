@@ -1,6 +1,12 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
+import remarkHtml from 'vite-remark-html'
 
 export default defineConfig({
-  plugins: [vue()]
+  plugins: [
+    Vue(),
+    remarkHtml({
+      exclude: /\/node_modules\//,
+    }),
+  ],
 })

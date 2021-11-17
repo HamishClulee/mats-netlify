@@ -1,6 +1,6 @@
 <template>
   <section class="bloglink-con">
-    <router-link :to="linkto">{{ posttitle }}</router-link>
+    <router-link :to="`/blog/${linkto.params.urlname}`">{{ posttitle }}</router-link>
     <div class="date">{{ date }}</div>
     <p class="short-des">{{ brief }}</p>
   </section>

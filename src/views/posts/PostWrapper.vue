@@ -2,6 +2,7 @@
   <main class="post-wrapper">
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div class="post-container" v-html="markdown" />
+    <!-- <Tester /> -->
     <NavFoot></NavFoot>
   </main>
 </template>
@@ -25,9 +26,12 @@ export default {
   },
   created() {
     if (this.getMDFileName()) {
-      import(`./live/${this.getMDFileName()}.md`)
-        .then((res) => (this.markdown = res.default))
-        .then(() => Prism.highlightAll());
+      import(`./live/${this.getMDFileName()}`)
+        .then((res) => {
+          this.markdown = res.default;
+        })
+        .then(() => Prism.highlightAll())
+        .catch((err) => console.log("***", err));
     }
   },
   methods: {
@@ -45,3 +49,23 @@ export default {
   },
 };
 </script>
+
+<style>
+pre {
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 1.7;
+  border-radius: 5px;
+  display: block;
+  overflow-x: auto;
+  background: #161b1d;
+  color: #7ea2b4;
+  padding: 0.5em;
+}
+
+code {
+  font-size: 1.1rem;
+  font-family: "Lucida Console", Monaco, monospace;
+  max-width: 100%;
+  overflow-x: scroll !important;
+}
+</style>

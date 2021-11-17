@@ -18,9 +18,13 @@
     "@vitejs/plugin-vue": "^1.9.3",
     "autoprefixer": "^10.4.0",
     "eslint-config-prettier": "^8.3.0",
+    "markdown-it": "^12.2.0",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
+    "remark-slug": "^7.0.1",
     "tailwindcss": "^2.2.19",
-    "vite": "^2.6.4"
+    "vite": "^2.6.4",
+    "vite-plugin-render": "^0.6.0",
+    "vite-remark-html": "^1.1.1"
   }
 }

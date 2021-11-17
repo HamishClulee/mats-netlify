@@ -4,10 +4,14 @@
 
     <mark class="divider">~</mark>
 
-    <h1 class="text-2xl mb-8 text-highlight font-display">
-      Ooof, this area is still under construction. Come back though, it's going to be
-      crackers!
-    </h1>
+    <BlogLink
+      v-for="({ title, date, brief, linkto }, index) in posts"
+      :key="index"
+      :posttitle="title"
+      :date="date"
+      :brief="brief"
+      :linkto="linkto"
+    ></BlogLink>
 
     <mark class="divider">~</mark>
     <h4>No More Posts.</h4>
@@ -26,13 +30,14 @@
 
 <script>
 import { posts } from "./posts/posts.js";
-import BlogLink from "../components/blog/BlogLink.vue";
 import NavFoot from "../components/layout/NavFoot.vue";
+import BlogLink from "../components/blog/BlogLink.vue";
+
 export default {
   name: "BlogList",
   components: {
-    BlogLink,
     NavFoot,
+    BlogLink,
   },
   data() {
     return {

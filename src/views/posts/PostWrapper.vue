@@ -1,5 +1,5 @@
 <template>
-  <main class="post-wrapper">
+  <main class="post-wrapper max-w-screen-xl mx-auto">
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div ref="html-container" class="p-2 md:p-8" v-html="markdown" />
     <mark class="divider my-12">~</mark>

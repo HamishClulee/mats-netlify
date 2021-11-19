@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-26 mx-auto w-full p-6 md:p-32">
+  <div class="mt-26 mx-auto w-full max-w-screen-xl mx-auto p-6 md:p-32">
     <BlogLink
       v-for="({ title, date, brief, linkto }, index) in posts"
       :key="index"

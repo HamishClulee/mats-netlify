@@ -1,5 +1,5 @@
 <template>
-  <div ref="content" class="flex flex-col">
+  <div ref="content" class="flex flex-col max-w-screen-xl mx-auto">
     <SlideUpContainer>
       <div
         class="flex items-start justify-center flex-col py-8 md:py-64 px-8 px-40 max-w-6xl"

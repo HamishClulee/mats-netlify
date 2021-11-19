@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <div class="p-8 md:p-32">
+  <div class="p-8 md:p-32 max-w-screen-xl mx-auto">
     <SlideUpContainer>
       <h1 class="text-6xl font-display mb-4">Hamish Clulee</h1>
       <h2 class="text-4xl text-secondary font-display mb-2">

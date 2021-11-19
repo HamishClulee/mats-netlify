@@ -24,7 +24,7 @@ export default {
   },
   created() {
     if (this.getMDFileName()) {
-      import(`./live/${this.getMDFileName()}`)
+      import(`./live/${this.getMDFileName()}.md`)
         .then((res) => {
           this.markdown = res.default;
         })
@@ -60,9 +60,11 @@ export default {
   methods: {
     getMDFileName() {
       try {
-        return posts.filter((item) => {
-          return item.linkto.params.urlname === this.$route.params.urlname;
-        })[0].linkto.params.mdfilename;
+        return posts
+          .filter((item) => {
+            return item.linkto.params.urlname === this.$route.params.urlname;
+          })[0]
+          .linkto.params.mdfilename.slice(0, -3);
       } catch (e) {
         this.$router.push({ name: "notfound" });
 

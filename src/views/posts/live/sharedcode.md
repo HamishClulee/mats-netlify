@@ -1,8 +1,7 @@
 # One Build System - Multiple Apps - Shared Components
 ## How to achieve this and how to maintain developer experience while doing so.
-_Last updated September 12, 2020_
 
-> Written with specific references to VueCli v3, but I think a good portion of whats contained within should be applicable across most FE codebases.
+_Last updated September 12, 2020_
 
 ### The What And The Why
 
@@ -158,5 +157,3 @@ One build system, one tsconfig and linting set up, shared code and as many apps 
 One `package.json`, although this won't affect bundle size, because webpack on bundles whats imported, it could be argued that it will become noisy over time. It's an acceptable issue for me.
 
 > Hope you enjoyed reading and found some of this useful.
-
-<mark class="divider my-12">~</mark>

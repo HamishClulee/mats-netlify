@@ -1,8 +1,6 @@
 # Organising Style Out Of Chaos
 ## Some things I've learned that might help you to avoid CSS fatigue
 
-> This guide is intended to assist Frontend devs that are looking for guidance around how to organise their CSS and pre-processors. Specifically focused on projects that conform to the `vue-cli` structure, but the majority of info here will be applicable to all Vue codebases that are run behind a build system, basically any code bases that use SFC. I have used a lot of the ideas here with React codebases as well. Hopefully you can glean some useful info and find ways to improve your approach.
-
 ### The Ideal Way To Set Up SCSS Imports and Structure For FE Codebases
 First things first, let’s get the order of imports - in our entry point JS file - correct.
 

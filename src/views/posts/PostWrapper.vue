@@ -2,7 +2,8 @@
   <main class="post-wrapper">
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div ref="html-container" class="p-2 md:p-8" v-html="markdown" />
-    <NavFoot></NavFoot>
+    <mark class="divider my-12">~</mark>
+    <NavFoot class="mb-12"></NavFoot>
   </main>
 </template>
 

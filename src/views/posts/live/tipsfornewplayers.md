@@ -1,18 +1,19 @@
 # Tips For New VueJs Players
 ## Common mistakes seen in Vue codebases
-_Last updated Aug 29, 2020_
 
->A list of common mistakes from junior Vue devs I have observed from the last few years.
+_Last updated Aug 29, 2020_
 
 
 ### Not using the same name for component file, component template declarations and a components name property
 
-```html
+```
+<<<html>>>
 <template>
   <foo-bar-component></foo-bar-component>
 <template>
 ```
-```javascript
+```
+<<<javascript>>>
 import FooBarComponent from '../components/FooBarComponent.vue'
 
 default {
@@ -28,6 +29,7 @@ Component template declarations should be written in the snake-case version of t
 To convert PascalCase to snake-case, simply replace the capital letters (except for the first!) into hypens:
 
 ```
+<<<perl>>>
 YouAreAwesome --> you-are-awesome
 ThisMakesDebuggingEasier --> this-makes-debugging-easier
 ```
@@ -36,27 +38,31 @@ Yes - this makes debugging easier, when using VueDevTools, it's much easier to f
 
 ### Not line wrapping
 
-**Bad**
+###### Bad
 ```html
+<<<html>>>
 <div class="warning-subtext">{{firstLetterUpperCase(participant.fullName)}} will not be able to see your message until his/her employer turns Coach Chat on.</div>
 ```
-**Good**
-```html
+###### Good
+```
+<<<html>>>
 <div class="warning-subtext">
-  {{firstLetterUpperCase(participant.fullName)}} 
-  will not be able to see your message until his/her employer 
+  {{firstLetterUpperCase(participant.fullName)}}
+  will not be able to see your message until his/her employer
   turns Coach Chat on.
 </div>
 ```
-**Bad**
-```html
+###### Bad
+```
+<<<html>>>
 <div class="survey-popup-card-footer">
   <b-button class="btn-heartbeat small white" variant="secondary" @click="handleHidePopup">BACK TO SURVEY</b-button>
   <b-button class="btn-heartbeat small blue" variant="primary" @click="handleCancelSurveyToDeleteQuestions">CANCEL</b-button>
 </div>
 ```
-**Good**
-```html
+###### Good
+```
+<<<html>>>
 <div class="survey-popup-card-footer">
 
   <b-button
@@ -64,7 +70,7 @@ Yes - this makes debugging easier, when using VueDevTools, it's much easier to f
     variant="secondary"
     @click="handleHidePopup"
   >BACK TO SURVEY</b-button>
-  
+
   <b-button
     class="btn-heartbeat small blue"
     variant="primary"
@@ -73,20 +79,21 @@ Yes - this makes debugging easier, when using VueDevTools, it's much easier to f
 
 </div>
 ```
-**Bad**
-
-```javascript
+###### Bad
+```
+<<<javascript>>>
 import { FETCH_EMBER_PATHS, FETCH_EMBER_REVIVE_PATHS, FETCH_EMBER_FILTERED_PRACTICES, FETCH_EMBER_PRACTICES_BY_ID, FETCH_EMBER_PRACTICES_BY_PATHS, FETCH_EMBER_PATH_ELIGIBILITY } from '../../store/modules/embers/constants';
 ```
-**Good**
-```javascript
-import { 
+###### Good
+```
+<<<javascript>>>
+import {
   FETCH_EMBER_PATHS,
   FETCH_EMBER_REVIVE_PATHS,
   FETCH_EMBER_FILTERED_PRACTICES,
   FETCH_EMBER_PRACTICES_BY_ID,
   FETCH_EMBER_PRACTICES_BY_PATHS,
-  FETCH_EMBER_PATH_ELIGIBILITY 
+  FETCH_EMBER_PATH_ELIGIBILITY
 } from '../../store/modules/embers/constants';
 ```
 
@@ -96,9 +103,9 @@ This doesn't need to be done manually, the VSCode prettier extension has really 
 
 ### Not using the same NodeJ version between code bases
 
-Swicthing between projects should be easy - pull repo, checkout branch, npm install, run dev - write code - should be quick, quick enough that you don't feel like you have to go and make a coffee after you run dev. You should be able to say to any other FE dev, “Run my branch and see what I mean” and they should be able to do this very quickly, having the same Node version is a big part of this. 
+Swicthing between projects should be easy - pull repo, checkout branch, npm install, run dev - write code - should be quick, quick enough that you don't feel like you have to go and make a coffee after you run dev. You should be able to say to any other FE dev, “Run my branch and see what I mean” and they should be able to do this very quickly, having the same Node version is a big part of this.
 
-Generally this problem arises when SCSS/SASS is in use, if you are not using pre-processors, then you can probably ignore this. 
+Generally this problem arises when SCSS/SASS is in use, if you are not using pre-processors, then you can probably ignore this.
 
 Node 12.x is an even version number, which means it's an LTS version, Long Term Stable release. This means bugs in Node get fixed but the Node maintainers. It also means that when we upgrade our build systems, there is one less thing to do.
 
@@ -111,18 +118,19 @@ TL;DR - install `nvm` then say:
 ### Not providing a :key when using v-for
 
 [For reference](https://stackoverflow.com/questions/47978853/whats-a-unique-key-in-vue-js-used-for) and [the docs](https://vuejs.org/v2/api/#key)
- 
+
 
 Basically, if you write a v-for you need to provide a key
 
-```html
-    <my-awesome-component
-        class="intelligent-reusable-class-name"
-        v-for="(value, index) in listOfThings"
-        :key="index"
-    ></my-awesome-component>
 ```
-If you read the docs carefully, you will that there are some higher end performance use cases where you would 
+<<<html>>>
+<my-awesome-component
+    class="intelligent-reusable-class-name"
+    v-for="(value, index) in listOfThings"
+    :key="index"
+></my-awesome-component>
+```
+If you read the docs carefully, you will that there are some higher end performance use cases where you would
 not use a `:key`. If you think you have found one of those use cases, contact Hamish to discuss, otherwise, use a `:key`.
 
 For our purposes, we use the `:key` every time we use `v-for`.
@@ -130,21 +138,21 @@ For our purposes, we use the `:key` every time we use `v-for`.
 
 ### Not writing reusable unit's of code or new components
 
-This item is a preview of another post that I am currently writing. Even if you're using a framework like vuetify or 
-vue-bootstrap (which I don't encourage or agree with, but regardless), that shouldn't mean that you never write new 
-custom components. Common cases - when using a framework- would be things like wrapper components for commonly used 
-groups of framework components, if you are often using a set of two or three buttons, write a wrapper component 
-called HorizontalButtonWrapper, or writing v-if / v-else blocks in a top level router component, use a component to 
+This item is a preview of another post that I am currently writing. Even if you're using a framework like vuetify or
+vue-bootstrap (which I don't encourage or agree with, but regardless), that shouldn't mean that you never write new
+custom components. Common cases - when using a framework- would be things like wrapper components for commonly used
+groups of framework components, if you are often using a set of two or three buttons, write a wrapper component
+called HorizontalButtonWrapper, or writing v-if / v-else blocks in a top level router component, use a component to
 wrap the logic and reduce the number of lines in the template block.
 
-Anytime you find you self using CTRL+C CTRL+V - write a new component, and reuse code rather than using the same 
-code twice! One of the main advantages of using an SPA framework like Vue is code reusage. Components are how 
-that advantage is manifested. It also provides developers the ability to really reduce bundle sizes if used 
+Anytime you find you self using CTRL+C CTRL+V - write a new component, and reuse code rather than using the same
+code twice! One of the main advantages of using an SPA framework like Vue is code reusage. Components are how
+that advantage is manifested. It also provides developers the ability to really reduce bundle sizes if used
 correctly.
 
-There is a limit to how far you should go, having thousands of files in your repository that are very rarely 
-used is just another symptom of inexperience or disorganised thinking. But what I have seen much more of is 
-huge Vue files, with a ton of spagetti code making debugging or refactoring much much slower, and as above, 
+There is a limit to how far you should go, having thousands of files in your repository that are very rarely
+used is just another symptom of inexperience or disorganised thinking. But what I have seen much more of is
+huge Vue files, with a ton of spagetti code making debugging or refactoring much much slower, and as above,
 fully ignoring one of the main benefit's of using Vue in the first place.
 
 The more code you resuse, the less bugs you will create.
@@ -156,9 +164,9 @@ The smaller your unit's of code, the eaiser they will be to test.
 Anytime you find you self using CTRL+C CTRL+V - write a new function, and reuse code rather than using the same code twice!
 
 ##### Some examples
-
-**Bad**
-```html
+###### Bad
+```
+<<<html>>>
 <template>
   <div class="row-container">
     <div class="row-item-container one">
@@ -178,8 +186,9 @@ Anytime you find you self using CTRL+C CTRL+V - write a new function, and reuse 
 </template>
 ```
 
-**Good**
-```html
+###### Good
+```
+<<<html>>>
 <template>
   <div
     class="row-container"
@@ -193,7 +202,8 @@ Anytime you find you self using CTRL+C CTRL+V - write a new function, and reuse 
   </div>
 </template>
 ```
-```javascript
+```
+<<<javascript>>>
 default {
   computed: {
     computedProperty() {
@@ -206,8 +216,9 @@ default {
   }
 }
 ```
-**Even Better**
-```html
+###### Even Better
+```
+<<<html>>>
 <template>
   <row-container
     class="row-container"
@@ -218,7 +229,8 @@ default {
   ></row-container>
 </template>
 ```
-```javascript
+```
+<<<javascript>>>
 default {
   computed: {
     computedProperty() {
@@ -255,23 +267,25 @@ We will have to spend time fixing bugs.
 
 Warnings are your friends. If you see one, google it. Then fix it. Then commit it and push it. If you can’t fix it get in touch with one of the senior guys to get some help.
 
-The problem that exists currently is that we have so many warnings, they just dont mean anything anymore. Let’s fix that! 
+The problem that exists currently is that we have so many warnings, they just dont mean anything anymore. Let’s fix that!
 
 Dealing with warnings, from the Developer Console, from Webpack, from NPM and from VSCode extentions really can reduce the amount of time we spend fixing bugs… by a lot.
 
 Try to fix one warning per day. It will make you a happier developer.
 
 ### Using eslint-disable
-**Very Bad**
-```javascript
+###### Very Bad
+```
+<<<javascript>>>
 // es-lint disable
 const someDodgyCode = expressionThatTriggeredAnEslintWarning()
 ```
 
-**Ok (but very very rare)**
-```javascript
+###### Ok (but very very rare)
+```
+<<<javascript>>>
 return () => {
-    
+
     // Explain: 'arguments' is a javascript keyword, eslint is wrong
     // Blame: Hamish
     // eslint-disable-next-line no-undef
@@ -284,7 +298,8 @@ Eslint warnings are like the warnings mentioned above, they are there for a reas
 
 If you use es-lint disable, you must provide:
 
-```javascript
+```
+<<<javascript>>>
     // Explain: reason for using, why you think eslint is wrong
     // Blame: Your Name Here
 ```
@@ -294,7 +309,7 @@ I’ve only ever found two or three places where eslint disable was the right th
 Instead of using disable - google the problem, then fix your code. If you can’t fix it so the warning goes away, contact one of the more senior guys, then work it out together.
 
 If you think the eslint configuartion is wrong, talk to your team lead and change the configuration to reflect your reasoning.
- 
+
 ### Use $forceUpdate
 
 99% of the time `$forceUpdate()` is not the correct solution, you can achieve the same results using `:key` and `$set()`, and sometimes `$nextTick()`.
@@ -305,14 +320,16 @@ If you find your self in a position in which you realy want to use it, contact m
 
 ### Include Magic Numbers and String Literals
 
-**Bad**
-```javascript
+###### Bad
+```
+<<<javascript>>>
 const foo = 300000
 this.bar = 'some awesome string'
 ```
-**Good**
+###### Good
 
-```javascript
+```
+<<<javascript>>>
 import { AWESOME_CONST } from '../constants/time.js'
 
 const FIVE_MINUTES = 1 * 1000 * 60 * 60 // Five minutes in miliseconds
@@ -322,8 +339,9 @@ Pretty simple: There shouldn’t be any numbers floating around the code base, d
 
 ### Using unnecessary `<template>` blocks
 
-**Bad**
-```html
+###### Bad
+```
+<<<html>>>
 <template v-if="someThing">
   <template v-if="someOtherThing && anotherThing || somethingElse">
     <div>
@@ -333,10 +351,11 @@ Pretty simple: There shouldn’t be any numbers floating around the code base, d
 <template>
 ```
 
-Templates are invisible elements provided by VueJs to allow for grouping elements together. You dont need a template to use v-if or v-show. You can use v-if and v-show on any element!  
+Templates are invisible elements provided by VueJs to allow for grouping elements together. You dont need a template to use v-if or v-show. You can use v-if and v-show on any element!
 
-**Also Bad**
-```html
+###### Also Bad
+```
+<<<html>>>
 <template v-if="something">
   <cool-component
     v-for="(datas, index) in arrayOfData"
@@ -346,13 +365,15 @@ Templates are invisible elements provided by VueJs to allow for grouping element
 ```
 Using a template because you can’t use v-if and v-for on the same element. Much easier to use a computed property and Array.filter() or Object.keys()
 
-```html
+```
+<<<html>>>
 <cool-component
   v-for="(datas, index) in filteredArrayOfData"
   :key="index"
 ></cool-component>
 ```
-```javascript
+```
+<<<javascript>>>
 computed: {
   filteredArrayOfData() {
     return arrayOfData.filter(value => {
@@ -365,7 +386,8 @@ It will perform faster, it's easier to read and you are using the Vue API correc
 
 There is really only one place where you should be using a `<template>` when you want to group a number of elements together for conditional visibility.
 
-```html
+```
+<<<html>>>
 <template v-if="something">
   <div>{{ someOtherData }}</div>
   <cooler-component></cooler-component>
@@ -373,13 +395,13 @@ There is really only one place where you should be using a `<template>` when you
 </template>
 ```
 
-#### Use `!important` when we don’t need to
+### Use `!important` when we don’t need to
 
 Anytime you find you self using `!important` you are probably in the wrong. When you find your self in a position in which you feel like you have to use the `!important` rule, it is generally because the structure of the CSS/SCSS files in your code base is incorrect. The biggest thing to remember is that CSS built as a hieracy, the reason you have to use `!important` is either because someone else used it before you (which leads to a never ending battle in CSS of over ridding rules using `!important`) or, because third party vendor CSS files have been included too far down in the CSS hieracy.
 
 I admit that some times you will have to use `!important` - but - before you use it, take a moment and ask your self why you are having to use it.
 
-It's much better to fix the problem than avoid it. If you look at the CSS rules in the browser developer console, can you see if you’re over ridding a rule from a Vendor css file, or a rule that we wrote. If it’s a Vendor rule, then look at where it's being imported, is it in main.js? If it is, is it imported before, or after the file you are currently working on? 
+It's much better to fix the problem than avoid it. If you look at the CSS rules in the browser developer console, can you see if you’re over ridding a rule from a Vendor css file, or a rule that we wrote. If it’s a Vendor rule, then look at where it's being imported, is it in main.js? If it is, is it imported before, or after the file you are currently working on?
 
 If you can’t work out why your having to use `!important` get in touch with Hamish and get some help, it's usually pretty easy to fix.
 

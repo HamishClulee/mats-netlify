@@ -1,5 +1,5 @@
 <template>
-  <div class="font-body max-w-screen-xl"></div>
+  <div class="font-body max-w-screen-2xl"></div>
   <MatsNav v-if="$route.name !== 'Home'"></MatsNav>
   <router-view></router-view>
 </template>

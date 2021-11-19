@@ -1,5 +1,5 @@
 <template>
-  <section id="not-found max-w-screen-xl mx-auto">
+  <section id="not-found max-w-screen-2xl mx-auto">
     <div class="circles">
       <p class="text-color-control">
         404<br />

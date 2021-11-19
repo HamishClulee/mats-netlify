@@ -1,5 +1,5 @@
 <template>
-  <div class="work-con max-w-screen-xl mx-auto">
+  <div class="work-con max-w-screen-2xl mx-auto">
     <h1 class="text-4xl font-display text-secondary mb-8">Current Projects</h1>
 
     <SlideUpContainer>

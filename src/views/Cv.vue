@@ -125,7 +125,7 @@
       employer="Allow Design"
       title="Contract Frontend Developer"
       dates="Intermittent between January 2017 - February 2019 (Contracts totalling 12 months)"
-      was-remote="true"
+      :was-remote="true"
     >
       <p class="cv-paragraph">
         Allow Design was a studio based in Dunedin, New Zealand. They had one primary

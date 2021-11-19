@@ -9,9 +9,8 @@
 
 <script>
 import { posts } from "./posts.js";
-
+// import { langs } from "./prisim-langs.js";
 import Prism from "prismjs";
-
 import NavFoot from "../../components/layout/NavFoot.vue";
 
 export default {
@@ -24,7 +23,7 @@ export default {
       markdown: null,
     };
   },
-  async created() {
+  created() {
     if (this.getMDFileName()) {
       import(`./live/${this.getMDFileName()}`)
         .then((res) => {
@@ -34,18 +33,31 @@ export default {
           const codeBlocks = this.$refs["html-container"].getElementsByTagName("code");
 
           for (let block of codeBlocks) {
-            console.log(block.innerHTML);
-            if (block.innerHTML.includes("&lt;&lt;&lt;javascript&gt;&gt;&gt;")) {
-              block.classList.add("language-javascript");
+            const text = block.innerHTML;
+            const langStartIndex = text.indexOf("&lt;&lt;&lt;");
+            const langEndIndex = text.indexOf("&gt;&gt;&gt;");
+            const langIndicatorLength = "&lt;&lt;&lt;".length;
+            const language = text.substr(
+              langStartIndex + langIndicatorLength,
+              langEndIndex - langIndicatorLength
+            );
+
+            if (langStartIndex !== -1) {
+              // console.log(langEndIndex);
+              // console.block.classList.add("language-javascript");
               block.innerHTML = block.innerHTML.replace(
-                "&lt;&lt;&lt;javascript&gt;&gt;&gt;",
+                `&lt;&lt;&lt;${language}&gt;&gt;&gt;`,
                 ""
               );
+              block.style.position = "relative";
+              block.style.bottom = "4px";
+              block.parentElement.classList = `language-${language}`;
+              // block.classList.add(`language-${language}`);
+              block.parentElement.style.paddingTop = "0px";
             }
           }
           Prism.highlightAll();
-        })
-        .catch((err) => console.log("***", err));
+        });
     }
   },
   methods: {

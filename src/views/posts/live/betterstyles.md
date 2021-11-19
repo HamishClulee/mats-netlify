@@ -22,7 +22,8 @@ The image below is a pretty good visual representation of the point I'm trying t
 
 The aim of the list - _the order of imports in your entry point_ - is to place all of the vendor and pre-processed styles in the user-agent category seen in the image above, and have the vendor styles placed in the hieracy so they can be overridden without any problems. If the vendor has written questionable CSS - no problem - it's easy to override. I am aware that the image and the examples I'm providing do not share a 1:1 relationship, bear with and try to take a higher level view at this point, things will become clear as you read on. Think about the following examples:
 
-```css
+```
+<<<css>>>
 // main.css
 .page-container {
     width: 98%;
@@ -35,6 +36,7 @@ The aim of the list - _the order of imports in your entry point_ - is to place a
 }
 ```
 ```html
+<<<html>>>
 // Home.vue
 <template>
     <div class="page-container home-page-container">
@@ -47,6 +49,7 @@ The aim of the list - _the order of imports in your entry point_ - is to place a
 It’s a simple one. The idea is that there are two rules for the width of the `<div>` right? So which one does the broswer choose to use? In this case it's the most recently used rule. So the width would be `80%`. What about if I added these two items...
 
 ```scss
+<<<css>>>
 // main.css
 .page-container {
     width: 98%;
@@ -58,7 +61,8 @@ It’s a simple one. The idea is that there are two rules for the width of the `
     width: 80% !important;
 }
 ```
-```html
+```
+<<<html>>>
 // Home.vue
 <template>
     <div class="page-container home-page-container" style="width: 1400px;">
@@ -83,6 +87,7 @@ The grey area begins when you start to think about adding helpers and utility ru
 Anyway, default styles found in the global folder might look something like this...
 
 ```scss
+<<<css>>>
 // input.scss
 input {
     font-size: 1.2em;
@@ -118,6 +123,7 @@ The example above aims to achieve a set up where putting am `<input>` element on
 **Thats when you write your styles in the `<style scoped>` block of your Vue component.**
 
 ```sass
+<<<css>>>
 // Example of what a typography.sass file might look like
 h1, h2, h3, h4, h5, h6
     line-height: 1.5
@@ -197,6 +203,7 @@ Where you land depends on your use case, people who are using a UI framework nee
 Without getting too far off track, a `vue-cli` project can easily be modified to allow usage of pre-processor variables and mixins _within_ `scoped` style blocks by default. Like so...
 
 ```sass
+<<<html>>>
 <style scoped lang="sass">
 .cool-heading
     color: $variable-from-global-styles
@@ -209,6 +216,7 @@ Here is how I achieve this in `vue-cli` codebases, in a perfect world.
 yarn add style-resources-loader
 ```
 ```javascript
+<<<javascript>>>
 // vue.config.js - located at root
 const path = require('path')
 

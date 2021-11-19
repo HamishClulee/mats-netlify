@@ -25,6 +25,7 @@ The image isn't great, but just use * as the value and you're good to go.
 Again the eventual solution here was pretty simple, finding the solution wasn't.
 
 ```
+<<<bash>>>
 sudo certbot certonly
     --server https://acme-v02.api.letsencrypt.org/directory
     --agree-tos
@@ -49,7 +50,8 @@ Next issue was getting Nginx to serve two different applications, one at the dom
 
 The codeblock below is the only nginx file for the whole site.
 
-```nginx
+```
+<<<nginx>>>
 server {
 
     index index.html index.htm index.nginx-debian.html;

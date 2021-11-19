@@ -23,7 +23,8 @@ The next thing I tried doing was using two distinct `vue.config.[app-name].js` f
 I did actually think that this would be a winner for a while, but got backed into a corner by realtive paths and needing to have two very different `index.html` files for each app, I could be wrong here but the results I was getting seemed like a bug in VueCli, of course, because what I'm doing isn't in the docs, it's probably not defined as a bug? Right?  `¯\_(ツ)_/¯`
 
 The code below is the first attempt at splitting the `vue.config.js` files, taken from the `package.json` scripts section.
-```javascript
+```
+<<<javascript>>>
   "scripts": {
 
     "serve:main": "env VUE_CLI_SERVICE_CONFIG_PATH=\"$PWD/vue.config.main.js\" vue-cli-service serve main-app/src/main.ts --dest main-app/dist",
@@ -36,7 +37,8 @@ The code below is the first attempt at splitting the `vue.config.js` files, take
 ```
 
 And the `vue.config.main-app.js` file.
-```javascript
+```
+<<<javascript>>>
 const path = require('path')
 
 module.exports = {
@@ -57,7 +59,8 @@ It _does work_ but it produced some strange results, and I think I found a bette
 Apologies for the pre-amble, here is the lamb sauce.
 
 `vue.config.js`
-```javascript
+```
+<<<javascript>>>
 const path = require('path')
 
 const isMainApp = process.env.APP_TYPE === 'main-app'
@@ -84,7 +87,8 @@ module.exports = {
 }
 ```
 `package.json`
-```javascript
+```
+<<<javascript>>>
 {
   "name": "example config",
   "version": "0.1.0",

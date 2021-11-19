@@ -21,7 +21,7 @@
       </div>
     </SlideUpContainer>
 
-    <mark class="divider">~</mark>
+    <mark class="divider my-12">~</mark>
 
     <div class="w-full flex items-center justify-center">
       <div class="w-64 flex flex-row justify-between">

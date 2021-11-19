@@ -58,7 +58,7 @@
       </section>
     </SlideUpContainer>
 
-    <mark class="divider">~</mark>
+    <mark class="divider my-12">~</mark>
 
     <h1 class="text-4xl font-display text-secondary mb-4">Older Projects</h1>
     <h5 class="mb-8">
@@ -126,7 +126,7 @@
       </section>
     </SlideUpContainer>
 
-    <mark class="divider">~</mark>
+    <mark class="divider my-12">~</mark>
 
     <section class="cards-container">
       <p class="my-2">
@@ -138,7 +138,7 @@
       </p>
     </section>
 
-    <mark class="divider">~</mark>
+    <mark class="divider my-12">~</mark>
 
     <NavFoot />
   </div>

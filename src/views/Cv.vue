@@ -2,16 +2,19 @@
   <!-- eslint-disable vue/no-v-html -->
   <div class="p-8 md:p-32">
     <SlideUpContainer>
-      <h1 class="text-6xl text-primary font-display mb-4">Hamish Clulee</h1>
+      <h1 class="text-6xl font-display mb-4">Hamish Clulee</h1>
       <h2 class="text-4xl text-secondary font-display mb-2">
         BSc, Software Engineering, University of Otago
       </h2>
-      <p>References upon request</p>
-      <p>hamish.clulee@gmail.com</p>
-      <p>New Zealand Citizen.</p>
-    </SlideUpContainer>
+      <span class="text-lg mb-1 flex text-gray-500">
+        <span class="mr-4">hamish.clulee@gmail.com</span>
+        <span class="transform scale-x-150">-</span>
+        <span class="mx-4">References upon request</span> -
+        <span class="mx-4">New Zealand Citizen.</span>
+      </span>
 
-    <mark class="divider mb-2">~</mark>
+      <mark class="divider my-12">~</mark>
+    </SlideUpContainer>
 
     <SlideUpContainer>
       <p class="cv-paragraph text-lg">
@@ -25,9 +28,9 @@
         solid foundations is the key. Complexity is unavoidable, the goal is to solve the
         problem without making it worse.
       </p>
-    </SlideUpContainer>
 
-    <mark class="divider">~</mark>
+      <mark class="divider my-12">~</mark>
+    </SlideUpContainer>
 
     <SlideUpContainer>
       <div class="flex flex-col md:flex-row justify-center">
@@ -73,9 +76,9 @@
           </p>
         </div>
       </div>
-    </SlideUpContainer>
 
-    <mark class="divider">~</mark>
+      <mark class="divider my-12">~</mark>
+    </SlideUpContainer>
 
     <JobCard
       employer="Dovetail Studios"
@@ -186,7 +189,7 @@
       </p>
     </JobCard>
 
-    <mark class="divider">~</mark>
+    <mark class="divider my-12">~</mark>
 
     <NavFoot></NavFoot>
   </div>

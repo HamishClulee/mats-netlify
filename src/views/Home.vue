@@ -1,7 +1,9 @@
 <template>
   <div ref="content" class="flex flex-col">
     <SlideUpContainer>
-      <div class="flex items-start justify-center flex-col py-64 px-40 max-w-6xl">
+      <div
+        class="flex items-start justify-center flex-col py-8 md:py-64 px-8 px-40 max-w-6xl"
+      >
         <h1 class="font-display text-6xl text-secondary mb-4">Hi, I'm Hamish</h1>
         <h3 class="text-3xl text-primary mb-4">
           An Engineer commited to simplicity, ease of maintainece and beauty in

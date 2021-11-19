@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <div class="p-32">
+  <div class="p-8 md:p-32">
     <SlideUpContainer>
       <h1 class="text-6xl text-primary font-display mb-4">Hamish Clulee</h1>
       <h2 class="text-4xl text-secondary font-display mb-2">
@@ -30,8 +30,8 @@
     <mark class="divider">~</mark>
 
     <SlideUpContainer>
-      <div class="flex flex-row justify-center">
-        <div class="mx-8 mt-4 mb-8 w-96">
+      <div class="flex flex-col md:flex-row justify-center">
+        <div class="mx-0 md:mx-8 mt-4 mb-8 w-full md:w-96">
           <p class="my-2 flex justify-between">
             ReactJs<span class="italic">1+ years</span>
           </p>
@@ -52,7 +52,7 @@
           </p>
         </div>
 
-        <div class="mx-8 mt-4 mb-8 w-96">
+        <div class="mx-0 md:mx-8 mt-4 mb-8 w-full md:w-96">
           <p class="my-2 flex justify-between">
             Mentoring<span class="italic">3+ years</span>
           </p>

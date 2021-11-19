@@ -1,7 +1,9 @@
 <template>
-  <section class="bloglink-con">
-    <router-link :to="`/blog/${linkto.params.urlname}`">{{ posttitle }}</router-link>
-    <div class="date">{{ date }}</div>
+  <section class="bloglink-con mb-8">
+    <router-link class="text-2xl text-secondary" :to="`/blog/${linkto.params.urlname}`">{{
+      posttitle
+    }}</router-link>
+    <div class="date text-gray-500">{{ date }}</div>
     <p class="short-des">{{ brief }}</p>
   </section>
 </template>

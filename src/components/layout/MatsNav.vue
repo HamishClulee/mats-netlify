@@ -41,13 +41,13 @@
     <!-- canvas transform origin-center -rotate-45 -->
     <div
       v-if="isCanvasOpen"
-      class="flex mt-16 bg-white w-full h-screen absolute inset-x-0 inset-y-0 justify-end"
+      class="flex mt-16 bg-white w-full h-screen absolute z-10 inset-x-0 inset-y-0 justify-end"
     >
       <div class="canvas-text-con">
         <div
           v-for="({ name, route, text }, index) in routes"
           :key="index"
-          class="mr-8 my-4"
+          class="mr-8 my-4 text-2xl"
           :class="checkvis(name) ? 'active-route canvas' : ''"
           @click="toggleCanvas"
         >

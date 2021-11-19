@@ -1,15 +1,13 @@
 <template>
   <main class="post-wrapper">
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div ref="html-container" class="p-8" v-html="markdown" />
-    <!-- <Tester /> -->
+    <div ref="html-container" class="p-2 md:p-8" v-html="markdown" />
     <NavFoot></NavFoot>
   </main>
 </template>
 
 <script>
 import { posts } from "./posts.js";
-// import { langs } from "./prisim-langs.js";
 import Prism from "prismjs";
 import NavFoot from "../../components/layout/NavFoot.vue";
 
@@ -34,26 +32,24 @@ export default {
 
           for (let block of codeBlocks) {
             const text = block.innerHTML;
-            const langStartIndex = text.indexOf("&lt;&lt;&lt;");
-            const langEndIndex = text.indexOf("&gt;&gt;&gt;");
+            const langIndicatorStartIndex = text.indexOf("&lt;&lt;&lt;");
+            const langIndicatorEndIndex = text.indexOf("&gt;&gt;&gt;");
             const langIndicatorLength = "&lt;&lt;&lt;".length;
             const language = text.substr(
-              langStartIndex + langIndicatorLength,
-              langEndIndex - langIndicatorLength
+              langIndicatorStartIndex + langIndicatorLength,
+              langIndicatorEndIndex - langIndicatorLength
             );
 
-            if (langStartIndex !== -1) {
-              // console.log(langEndIndex);
-              // console.block.classList.add("language-javascript");
+            if (langIndicatorStartIndex !== -1) {
+              const { style, parentElement } = block;
               block.innerHTML = block.innerHTML.replace(
                 `&lt;&lt;&lt;${language}&gt;&gt;&gt;`,
                 ""
               );
-              block.style.position = "relative";
-              block.style.bottom = "4px";
-              block.parentElement.classList = `language-${language}`;
-              // block.classList.add(`language-${language}`);
-              block.parentElement.style.paddingTop = "0px";
+              style.position = "relative";
+              style.bottom = "4px";
+              parentElement.classList = `language-${language}`;
+              parentElement.style.paddingTop = "0px";
             }
           }
           Prism.highlightAll();

@@ -12,7 +12,7 @@
     <DividerUi />
 
     <section class="flex flex-col w-full justify-center items-center">
-      <h4>No More Posts.</h4>
+      <h4 class="mb-4 text-xl text-gray-500">No More Posts.</h4>
       <iframe
         src="https://giphy.com/embed/2fC4V2UeJveb6"
         width="480"
@@ -32,7 +32,7 @@
 import { posts } from "./posts/posts.js";
 import NavFoot from "../components/layout/NavFoot.vue";
 import BlogLink from "../components/blog/BlogLink.vue";
-import DividerUi from "../components/util/DividerUi.vue.js";
+import DividerUi from "../components/util/DividerUi.vue";
 
 export default {
   name: "BlogList",

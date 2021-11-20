@@ -82,9 +82,27 @@
     </SlideUpContainer>
 
     <JobCard
+      employer="Contracter"
+      title="Senior Software Engineer"
+      dates="June 2020 - Current"
+      :was-remote="true"
+      :references="true"
+    >
+      <TechIndicator :tech="contractTech" />
+      <p class="cv-paragraph">
+        One short run contract for Zer0, a US blockchain start up. Mostly writing React
+        but responsibilities included code reviews and mentoring for junior devs.
+      </p>
+      <p class="cv-paragraph">
+        Another short run contract for Streem Media Au. Working with Vue and Ruby on
+        Rails, mostly focused on overhauling their reporting feature.
+      </p>
+    </JobCard>
+
+    <JobCard
       employer="Dovetail Studios"
       title="Senior Javascript Developer"
-      dates="January 2020 - Current"
+      dates="January 2021 - June 2021 (6 month contract)"
       :was-remote="true"
       :references="true"
     >
@@ -97,8 +115,8 @@
         start ups and work with founders to build awesome products with big market impact.
       </p>
       <p class="cv-paragraph">
-        I work as a senior javascript developer for a new currency hedging and BI platform
-        called Fluenccy.
+        I worked as a senior javascript developer for a new currency hedging and BI
+        platform called Fluenccy.
       </p>
       <p class="cv-paragraph">
         On a daily basis, delivering features in ReactJs and Typescript, or Node. Working
@@ -217,6 +235,23 @@ export default {
   },
   data() {
     return {
+      contractTech: [
+        {
+          name: "React",
+          value: 30,
+          x: 0,
+        },
+        {
+          name: "Vue",
+          value: 40,
+          x: 30,
+        },
+        {
+          name: "Ruby On Rails",
+          value: 30,
+          x: 70,
+        },
+      ],
       dovetailTech: [
         {
           name: "Typescript",

@@ -15,6 +15,7 @@ module.exports = {
         ['tertiary-light']: '#ffa588',
         highlight: '#03A9F4',
         ['body-tone']: '#545454',
+        link: '#2196F3',
       },
       animation: {
         'slide-up': '1.5s ease-in-out 0.5s slide-up both',

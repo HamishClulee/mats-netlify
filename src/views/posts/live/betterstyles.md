@@ -1,8 +1,6 @@
 # Organising Style Out Of Chaos
 ## Some things I've learned that might help you to avoid CSS fatigue
 
-> This guide is intended to assist Frontend devs that are looking for guidance around how to organise their CSS and pre-processors. Specifically focused on projects that conform to the `vue-cli` structure, but the majority of info here will be applicable to all Vue codebases that are run behind a build system, basically any code bases that use SFC. I have used a lot of the ideas here with React codebases as well. Hopefully you can glean some useful info and find ways to improve your approach.
-
 ### The Ideal Way To Set Up SCSS Imports and Structure For FE Codebases
 First things first, let’s get the order of imports - in our entry point JS file - correct.
 
@@ -19,10 +17,11 @@ Next let’s quickly ensure everyone understands CSS Specificity, then we can ta
 The image below is a pretty good visual representation of the point I'm trying to make.
 
 ![CSS Specificity](/images/css.png "Diagram displaying CSS Specificity")
-                  
+
 The aim of the list - _the order of imports in your entry point_ - is to place all of the vendor and pre-processed styles in the user-agent category seen in the image above, and have the vendor styles placed in the hieracy so they can be overridden without any problems. If the vendor has written questionable CSS - no problem - it's easy to override. I am aware that the image and the examples I'm providing do not share a 1:1 relationship, bear with and try to take a higher level view at this point, things will become clear as you read on. Think about the following examples:
 
-```scss
+```
+<<<css>>>
 // main.css
 .page-container {
     width: 98%;
@@ -35,6 +34,7 @@ The aim of the list - _the order of imports in your entry point_ - is to place a
 }
 ```
 ```html
+<<<html>>>
 // Home.vue
 <template>
     <div class="page-container home-page-container">
@@ -47,6 +47,7 @@ The aim of the list - _the order of imports in your entry point_ - is to place a
 It’s a simple one. The idea is that there are two rules for the width of the `<div>` right? So which one does the broswer choose to use? In this case it's the most recently used rule. So the width would be `80%`. What about if I added these two items...
 
 ```scss
+<<<css>>>
 // main.css
 .page-container {
     width: 98%;
@@ -58,7 +59,8 @@ It’s a simple one. The idea is that there are two rules for the width of the `
     width: 80% !important;
 }
 ```
-```html
+```
+<<<html>>>
 // Home.vue
 <template>
     <div class="page-container home-page-container" style="width: 1400px;">
@@ -83,6 +85,7 @@ The grey area begins when you start to think about adding helpers and utility ru
 Anyway, default styles found in the global folder might look something like this...
 
 ```scss
+<<<css>>>
 // input.scss
 input {
     font-size: 1.2em;
@@ -118,6 +121,7 @@ The example above aims to achieve a set up where putting am `<input>` element on
 **Thats when you write your styles in the `<style scoped>` block of your Vue component.**
 
 ```sass
+<<<css>>>
 // Example of what a typography.sass file might look like
 h1, h2, h3, h4, h5, h6
     line-height: 1.5
@@ -197,6 +201,7 @@ Where you land depends on your use case, people who are using a UI framework nee
 Without getting too far off track, a `vue-cli` project can easily be modified to allow usage of pre-processor variables and mixins _within_ `scoped` style blocks by default. Like so...
 
 ```sass
+<<<html>>>
 <style scoped lang="sass">
 .cool-heading
     color: $variable-from-global-styles
@@ -209,6 +214,7 @@ Here is how I achieve this in `vue-cli` codebases, in a perfect world.
 yarn add style-resources-loader
 ```
 ```javascript
+<<<javascript>>>
 // vue.config.js - located at root
 const path = require('path')
 
@@ -239,7 +245,7 @@ So following on from the ideas above, the styles I'm about to talk about will be
 
 Here is the list of style instances that you will end up using in a typical `vue-cli` codebase, in the same format as the image - lower in the list will override items higher in the list.
 
-1. Styles written inside Vue `scoped` style blocks. 
+1. Styles written inside Vue `scoped` style blocks.
 > Don't forget that anything written in `scoped` style block will not apply to things like `v-html` content, or any html added dynamically via javascript (useless you are crafty and scrape the `v-data` attribute from the component, and apply it to every node of dynamic html)
 2. Inline styles written on HTML elements using the standard HTML syntax, but in our case this would most likely become styles added by the Vue `style` attribute.
 3. Styles written via Javscript.
@@ -247,7 +253,7 @@ Here is the list of style instances that you will end up using in a typical `vue
 
 Which should bring us to a place where the traditional model - _shown in the hieracy image above_ - is now replaced by our new paradigm.
 
-> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use `!important` or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have a slighly different syntax) and finally styles written via Javascript. 
+> Things to keep in mind. The order in which we import things is important, especially in complex SPA applications like ours. So, we import the third party stuff first, so we can easily override it if we want to customise, and so we don't have to use `!important` or an inline style to do so. After the imports are set, then the hieracy within our SFC is basically (from low to high): Scoped Style Blocks, Vue `style` attribute, html inline `style` attribute (these two have a slighly different syntax) and finally styles written via Javascript.
 
 ### A Note On Performance In Dev Envs
 

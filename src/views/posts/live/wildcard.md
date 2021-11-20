@@ -1,6 +1,5 @@
 # Wildcard subdomains
 ## When using digitalocean, Let's Encrypt, Nginx and ExpressJs. The power of the almighty *
-> This guide is intended to help you achieve the same thing, but also to keep a record for myself and thirdly to show everyone how smart I am >.< All jokes aside though, I am aware how specific this is as a use case, the hope is that if you are trying to achieve something similar you can cherrypick the bits that are relevant to your mision
 
 ### The Why and The What
 
@@ -25,15 +24,16 @@ The image isn't great, but just use * as the value and you're good to go.
 Again the eventual solution here was pretty simple, finding the solution wasn't.
 
 ```
-sudo certbot certonly 
-    --server https://acme-v02.api.letsencrypt.org/directory 
-    --agree-tos 
-    --manual 
-    --preferred-challenges dns 
-    -d welcomeqr.codes 
+<<<bash>>>
+sudo certbot certonly
+    --server https://acme-v02.api.letsencrypt.org/directory
+    --agree-tos
+    --manual
+    --preferred-challenges dns
+    -d welcomeqr.codes
     -d *.welcomeqr.codes
 ```
-Before Let's Encrypt came to prominence, a humble Frontend dev such as myself would have to go through some small pain and suffering to certify a domain. Now it's straight forward, even for something like the subject of this blog post. In the vast majority of use cases certbot will take care of your Apache or Nginx configs, great for newbs like me, who want to spend time looking at color pallettes and monstrous NPM bundles while combing their beards and drinking artisinal craft beer. The caveat here is that for wildcard certificates you will need to write your Nginx configuration manually. 
+Before Let's Encrypt came to prominence, a humble Frontend dev such as myself would have to go through some small pain and suffering to certify a domain. Now it's straight forward, even for something like the subject of this blog post. In the vast majority of use cases certbot will take care of your Apache or Nginx configs, great for newbs like me, who want to spend time looking at color pallettes and monstrous NPM bundles while combing their beards and drinking artisinal craft beer. The caveat here is that for wildcard certificates you will need to write your Nginx configuration manually.
 
 Certbot is an excellent package provided by Let's Encrypt, honestly top notch, please donate and build statues in honour of Josh Aas, Eric Rescorla, Peter Eckersley and J. Alex Halderman.
 
@@ -49,7 +49,8 @@ Next issue was getting Nginx to serve two different applications, one at the dom
 
 The codeblock below is the only nginx file for the whole site.
 
-```nginx
+```
+<<<nginx>>>
 server {
 
     index index.html index.htm index.nginx-debian.html;
@@ -133,36 +134,20 @@ CORS is a hardship. I had a whitelist, a regex and `isDev` switch before I start
 
 Bascially the browser isn't happy with HTTP requests being fired from a subdomain to a domain without a header named `Access-Control-Allow-Origin` which matches the origin of the request, where the origin matches the domain and the subdomain. Which is fine if you have a couple of subdomains hardcoded, but if you want the power of the *, then a little extra hackery is required.
 
-```javascript
-// Middleware - this.app = express()
-
-this.app.use((req, res, next) => {
-
-    // tldjs is a handy npm package, 10/10 recommended
-    const tld = tldjs.parse(req.header('origin'))
-
-    if (process.env.NODE_ENV === 'production' && tld.isValid && tld.domain === 'welcomeqr.codes' ) {
-
-        // this is the line that does the 'heavy' lifting
-        res.setHeader('Access-Control-Allow-Origin', req.header('origin'))
-
-    }
-
-    // other headers and things here have been ommitted becuause security and brevity
-
-    next()
-})
-
-// expressjs CORS package
-this.app.use(cors({
-    origin:
-        process.env.NODE_ENV !== 'production' ?
-            [DEV_URL, DEV_URL_PUBLISHED, '/\.google.com\.com$/']
-            : [PROD_URL, '/\.welcomeqr\.codes$/', '/\.google.com\.com$/'],
-    credentials: true
-}))
 ```
-That's it for CORS really, you could do this at the Nginx level as well, but for me this made more sence and does the job well. I can hear confused screaming coming from the security nerds "But now someone can run whatever Javascript they want on a published subdomain, and everyone could die!" 
+<<<javascript>>>
+created() {
+    if (this.getMDFileName()) {
+    import(`./live/${this.getMDFileName()}`)
+        .then((res) => {
+        this.markdown = res.default;
+        })
+        .then(() => Prism.highlightAll())
+    }
+}
+```
+
+That's it for CORS really, you could do this at the Nginx level as well, but for me this made more sence and does the job well. I can hear confused screaming coming from the security nerds "But now someone can run whatever Javascript they want on a published subdomain, and everyone could die!"
 
 That is true, but all my endpoints are locked up with `httpOnly` cookies and JWT tokens, also all inputs are santised. I think we are safe, and that tinfoil hat looks a little silly on you.
 

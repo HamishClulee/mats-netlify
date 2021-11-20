@@ -1,66 +1,48 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 
-const home = () => import('../views/home')
-const work = () => import('../views/work')
-const cv = () => import('../views/cv')
-const blog = () => import('../views/bloglist')
-const notfound = () => import('../views/notfound')
-const ronin = () => import('../views/projects/ronin')
-const postwrapper = () => import('../views/posts/postwrapper')
-const hackery = () => import('../views/hackery')
+const Home = () => import('../views/Home.vue')
+const Work = () => import('../views/Work.vue')
+const Cv = () => import('../views/Cv.vue')
+const Blog = () => import('../views/BlogList.vue')
+const FourOhFour = () => import('../views/FourOhFour.vue')
+const PostWrapper = () => import('../views/posts/PostWrapper.vue')
 
-Vue.use(Router)
-
-export default new Router({
-    mode: 'history',
-    scrollBehavior (to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition
-        } else {
-            return { x: 0, y: 0 }
-        }
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: Home,
     },
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: home
-        },
-        {
-            path: '/hackery',
-            name: 'hackery',
-            component: hackery
-        },
-        {
-            path: '/work',
-            name: 'work',
-            component: work,
-        },
-        {
-            path: '/blog/:urlname',
-            name: 'post',
-            component: postwrapper,
-        },
-        {
-            path: '/work/ronin',
-            name: 'ronin',
-            component: ronin,
-        },
-        {
-            path: '/blog',
-            name: 'blog',
-            component: blog,
-        },
-        {
-            path: '/cv',
-            name: 'cv',
-            component: cv
-        },
-        {
-            path: '*',
-            name: 'notfound',
-            component: notfound
-        }
-    ]
+    {
+        path: '/work',
+        name: 'Work',
+        component: Work,
+    },
+    {
+        path: '/blog/:urlname',
+        name: 'Post',
+        component: PostWrapper,
+    },
+    {
+        path: '/blog',
+        name: 'Blog',
+        component: Blog,
+    },
+    {
+        path: '/cv',
+        name: 'Cv',
+        component: Cv,
+    },
+    {
+        path: '/:catchAll(.*)',
+        name: 'FourOhFour',
+        component: FourOhFour,
+    },
+]
+
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes,
 })
+
+export default router

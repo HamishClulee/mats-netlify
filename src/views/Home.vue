@@ -6,7 +6,7 @@
       >
         <h1 class="font-display text-6xl text-secondary mb-4">Hi, I'm Hamish</h1>
         <h3 class="text-3xl text-primary mb-4">
-          An Engineer commited to simplicity, ease of maintainece and beauty in
+          An engineer commited to simplicity, ease of maintainece and beauty in
           <code>function.</code>
         </h3>
 
@@ -21,7 +21,7 @@
       </div>
     </SlideUpContainer>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
 
     <div class="w-full flex items-center justify-center">
       <div class="w-64 flex flex-row justify-between">
@@ -42,11 +42,12 @@
 
 <script>
 import SlideUpContainer from "../components/animate/SlideUpContainer.vue";
-
+import DividerUi from "../components/util/DividerUi.vue";
 export default {
   name: "HomePage",
   components: {
     SlideUpContainer,
+    DividerUi,
   },
 };
 </script>

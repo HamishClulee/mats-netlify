@@ -3,18 +3,6 @@
 @tailwind utilities;
 
 /* purgecss start ignore */
-mark.divider {
-  font-size: 2.1rem;
-  width: 100%;
-  background-color: transparent;
-  height: 40px;
-  display: flex;
-  color: #ffa588 !important;
-  align-items: center;
-  justify-content: center;
-  transform: scaleX(1.4) rotate(5deg);
-}
-
 .post-wrapper p {
   margin-bottom: 10px;
   color: theme('colors.gray.500');

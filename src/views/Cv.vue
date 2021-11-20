@@ -2,18 +2,19 @@
   <!-- eslint-disable vue/no-v-html -->
   <div class="p-8 md:p-32 max-w-screen-2xl mx-auto">
     <SlideUpContainer>
-      <h1 class="text-6xl font-display mb-4">Hamish Clulee</h1>
-      <h2 class="text-4xl text-secondary font-display mb-2">
+      <h1 class="text-3xl md:text-6xl font-display mb-2 md:mb-4">Hamish Clulee</h1>
+      <h2 class="text-2xl md:text-4xl text-secondary font-display mb-1 md:mb-2">
         BSc, Software Engineering, University of Otago
       </h2>
-      <span class="text-lg mb-1 flex text-gray-500">
+      <span class="text-lg mb-1 flex flex-col md:flex-row text-gray-500">
         <span class="mr-4">hamish.clulee@gmail.com</span>
-        <span class="transform scale-x-150">-</span>
-        <span class="mx-4">References upon request</span> -
-        <span class="mx-4">New Zealand Citizen.</span>
+        <span class="transform scale-x-150 hidden md:inline">-</span>
+        <span class="mx-0 md:mx-4">References upon request</span>
+        <span class="transform scale-x-150 hidden md:inline">-</span>
+        <span class="mx-0 md:mx-4">New Zealand Citizen.</span>
       </span>
 
-      <mark class="divider my-12">~</mark>
+      <DividerUi />
     </SlideUpContainer>
 
     <SlideUpContainer>
@@ -29,7 +30,7 @@
         problem without making it worse.
       </p>
 
-      <mark class="divider my-12">~</mark>
+      <DividerUi />
     </SlideUpContainer>
 
     <SlideUpContainer>
@@ -77,7 +78,7 @@
         </div>
       </div>
 
-      <mark class="divider my-12">~</mark>
+      <DividerUi />
     </SlideUpContainer>
 
     <JobCard
@@ -87,6 +88,7 @@
       :was-remote="true"
       :references="true"
     >
+      <TechIndicator :tech="dovetailTech" />
       <p class="cv-paragraph">
         Dovetail leads product development of some of the fastest growing companies in the
         world, providing digital strategy, growth strategy, design and development
@@ -111,6 +113,7 @@
       :was-remote="true"
       :references="true"
     >
+      <TechIndicator :tech="aduroTech" />
       <p class="cv-paragraph">AduroLabs is a Health and Wellness service provider.</p>
       <p class="cv-paragraph">
         I was primarily tasked with leadership and mentoring for the frontend teams. Daily
@@ -130,6 +133,7 @@
       dates="Intermittent between January 2017 - February 2019 (Contracts totalling 12 months)"
       :was-remote="true"
     >
+      <TechIndicator :tech="allowTech" />
       <p class="cv-paragraph">
         Allow Design was a studio based in Dunedin, New Zealand. They had one primary
         client, a US healthcare giant. They would create functioning mini applications as
@@ -162,6 +166,7 @@
       :was-remote="true"
       :references="true"
     >
+      <TechIndicator :tech="fusionTech" />
       <p class="cv-paragraph">
         Fusion is a sports science company, based in Brisbane, Australia. They sell
         hardware products and provide a web app, all designed to provide athletes and
@@ -189,7 +194,7 @@
       </p>
     </JobCard>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
 
     <NavFoot></NavFoot>
   </div>
@@ -199,12 +204,113 @@
 import SlideUpContainer from "../components/animate/SlideUpContainer.vue";
 import JobCard from "../components/cards/JobCard.vue";
 import NavFoot from "../components/layout/NavFoot.vue";
+import DividerUi from "../components/util/DividerUi.vue";
+import TechIndicator from "../components/visualisations/TechIndicator.vue";
 export default {
   name: "CvPage",
   components: {
     NavFoot,
     SlideUpContainer,
     JobCard,
+    DividerUi,
+    TechIndicator,
+  },
+  data() {
+    return {
+      dovetailTech: [
+        {
+          name: "Typescript",
+          value: 20,
+          x: 0,
+        },
+        {
+          name: "GraphQl",
+          value: 20,
+          x: 20,
+        },
+        {
+          name: "ExpressJs",
+          value: 25,
+          x: 40,
+        },
+        {
+          name: "PSQL",
+          value: 10,
+          x: 65,
+        },
+        {
+          name: "React",
+          value: 25,
+          x: 75,
+        },
+      ],
+      aduroTech: [
+        {
+          name: "Vue",
+          value: 40,
+          x: 0,
+        },
+        {
+          name: "Vuex",
+          value: 15,
+          x: 40,
+        },
+        {
+          name: "Docker",
+          value: 15,
+          x: 55,
+        },
+        {
+          name: "ExpressJs",
+          value: 20,
+          x: 70,
+        },
+        {
+          name: "PSQL",
+          value: 10,
+          x: 90,
+        },
+      ],
+      allowTech: [
+        {
+          name: "Javascript",
+          value: 30,
+          x: 0,
+        },
+        {
+          name: "Vue",
+          value: 40,
+          x: 30,
+        },
+        {
+          name: "Webpack",
+          value: 30,
+          x: 70,
+        },
+      ],
+      fusionTech: [
+        {
+          name: "Java",
+          value: 40,
+          x: 0,
+        },
+        {
+          name: "Vue",
+          value: 30,
+          x: 40,
+        },
+        {
+          name: "Vuex",
+          value: 20,
+          x: 70,
+        },
+        {
+          name: "PSQL",
+          value: 10,
+          x: 90,
+        },
+      ],
+    };
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <main class="post-wrapper max-w-screen-2xl mx-auto">
     <!-- eslint-disable-next-line vue/no-v-html -->
     <div ref="html-container" class="p-2 md:p-8" v-html="markdown" />
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
     <NavFoot class="mb-12"></NavFoot>
   </main>
 </template>
@@ -10,12 +10,14 @@
 <script>
 import { posts } from "./posts.js";
 import Prism from "prismjs";
+import DividerUi from "../../components/util/DividerUi.vue.js";
 import NavFoot from "../../components/layout/NavFoot.vue";
 
 export default {
   name: "PostWrapper",
   components: {
     NavFoot,
+    DividerUi,
   },
   data() {
     return {

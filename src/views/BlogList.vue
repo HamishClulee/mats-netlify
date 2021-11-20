@@ -9,7 +9,7 @@
       :linkto="linkto"
     ></BlogLink>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
 
     <section class="flex flex-col w-full justify-center items-center">
       <h4>No More Posts.</h4>
@@ -23,7 +23,7 @@
       ></iframe>
     </section>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
     <NavFoot></NavFoot>
   </div>
 </template>
@@ -32,12 +32,14 @@
 import { posts } from "./posts/posts.js";
 import NavFoot from "../components/layout/NavFoot.vue";
 import BlogLink from "../components/blog/BlogLink.vue";
+import DividerUi from "../components/util/DividerUi.vue.js";
 
 export default {
   name: "BlogList",
   components: {
     NavFoot,
     BlogLink,
+    DividerUi,
   },
   data() {
     return {

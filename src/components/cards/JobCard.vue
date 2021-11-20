@@ -7,7 +7,6 @@
         {{ dates }}
       </h5>
       <h6 v-if="references" class="italic mb-4 mt-1">References available</h6>
-
       <slot />
       <span
         v-if="wasRemote"

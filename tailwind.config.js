@@ -12,8 +12,9 @@ module.exports = {
         primary: '#fbc02d',
         secondary: '#00bfa5',
         tertiary: '#ff5722',
+        ['tertiary-light']: '#ffa588',
         highlight: '#03A9F4',
-        'body-tone': '#545454',
+        ['body-tone']: '#545454',
       },
       animation: {
         'slide-up': '1.5s ease-in-out 0.5s slide-up both',

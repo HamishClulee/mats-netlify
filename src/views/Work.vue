@@ -58,7 +58,7 @@
       </section>
     </SlideUpContainer>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
 
     <h1 class="text-4xl font-display text-secondary mb-4">Older Projects</h1>
     <h5 class="mb-8">
@@ -126,7 +126,7 @@
       </section>
     </SlideUpContainer>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
 
     <section class="cards-container">
       <p class="my-2">
@@ -138,7 +138,7 @@
       </p>
     </section>
 
-    <mark class="divider my-12">~</mark>
+    <DividerUi />
 
     <NavFoot />
   </div>
@@ -148,9 +148,10 @@
 import FeatureCard from "../components/cards/FeatureCard.vue";
 import SlideUpContainer from "../components/animate/SlideUpContainer.vue";
 import NavFoot from "../components/layout/NavFoot.vue";
+import DividerUi from "../components/util/DividerUi.vue";
 export default {
   name: "WorkPage",
-  components: { FeatureCard, NavFoot, SlideUpContainer },
+  components: { FeatureCard, NavFoot, SlideUpContainer, DividerUi },
   data() {
     return {
       babimg: "https://media.giphy.com/media/4560Nv2656Gv0Lvp9F/giphy.gif",

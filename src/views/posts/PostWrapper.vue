@@ -10,7 +10,7 @@
 <script>
 import { posts } from "./posts.js";
 import Prism from "prismjs";
-import DividerUi from "../../components/util/DividerUi.vue.js";
+import DividerUi from "../../components/util/DividerUi.vue";
 import NavFoot from "../../components/layout/NavFoot.vue";
 
 export default {

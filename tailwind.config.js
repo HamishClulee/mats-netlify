@@ -20,6 +20,7 @@ module.exports = {
       animation: {
         'slide-up': '1.5s ease-in-out 0.5s slide-up both',
         'slide-down': 'slide-up 2s ease',
+        'fade-in': 'fade-in 1s ease',
       },
     },
   },

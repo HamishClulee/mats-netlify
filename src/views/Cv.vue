@@ -7,11 +7,11 @@
         BSc, Software Engineering, University of Otago
       </h2>
       <span class="text-lg mb-1 flex flex-col md:flex-row text-gray-500">
-        <span class="mr-4">hamish.clulee@gmail.com</span>
+        <span class="mr-4 italic">hamish.clulee@gmail.com</span>
         <span class="transform scale-x-150 hidden md:inline">-</span>
-        <span class="mx-0 md:mx-4">References upon request</span>
+        <span class="mx-0 md:mx-4 italic">References upon request</span>
         <span class="transform scale-x-150 hidden md:inline">-</span>
-        <span class="mx-0 md:mx-4">New Zealand Citizen.</span>
+        <span class="mx-0 md:mx-4 italic">New Zealand Citizen.</span>
       </span>
 
       <DividerUi />
@@ -88,7 +88,7 @@
       :was-remote="true"
       :references="true"
     >
-      <TechIndicator :tech="contractTech" />
+      <TechIndicator :tech="contract" />
       <p class="cv-paragraph">
         One short run contract for Zer0, a US blockchain start up. Mostly writing React
         but responsibilities included code reviews and mentoring for junior devs.
@@ -106,7 +106,7 @@
       :was-remote="true"
       :references="true"
     >
-      <TechIndicator :tech="dovetailTech" />
+      <TechIndicator :tech="dovetail" />
       <p class="cv-paragraph">
         Dovetail leads product development of some of the fastest growing companies in the
         world, providing digital strategy, growth strategy, design and development
@@ -130,7 +130,7 @@
       dates="January 2020 - January 2021 (1 year)"
       :references="true"
     >
-      <TechIndicator :tech="aduroTech" />
+      <TechIndicator :tech="aduro" />
       <p class="cv-paragraph">AduroLabs is a Health and Wellness service provider.</p>
       <p class="cv-paragraph">
         I was primarily tasked with leadership and mentoring for the frontend teams. Daily
@@ -151,7 +151,7 @@
       :was-remote="true"
       :references="true"
     >
-      <TechIndicator :tech="netographTech" />
+      <TechIndicator :tech="netograph" />
       <p class="cv-paragraph">
         Netograph provides a web app and API. Their frontend is written in <em>VueJs</em>
         and Typescript, backed by a custom webpack configuration. Visualisations are
@@ -194,7 +194,7 @@
       dates="Intermittent between January 2017 - February 2019 (Contracts totalling 12 months)"
       :was-remote="true"
     >
-      <TechIndicator :tech="allowTech" />
+      <TechIndicator :tech="allow" />
       <p class="cv-paragraph">
         Allow Design was a studio based in Dunedin, New Zealand. They had one primary
         client, a US healthcare giant. They would create functioning mini applications as
@@ -227,7 +227,7 @@
       :was-remote="true"
       :references="true"
     >
-      <TechIndicator :tech="fusionTech" />
+      <TechIndicator :tech="fusion" />
       <p class="cv-paragraph">
         Fusion is a sports science company, based in Brisbane, Australia. They sell
         hardware products and provide a web app, all designed to provide athletes and
@@ -267,6 +267,9 @@ import JobCard from "../components/cards/JobCard.vue";
 import NavFoot from "../components/layout/NavFoot.vue";
 import DividerUi from "../components/util/DividerUi.vue";
 import TechIndicator from "../components/visualisations/TechIndicator.vue";
+import { tech } from "../constants/tech-indicator.js";
+const { dovetail, aduro, netograph, allow, fusion, contract } = tech;
+
 export default {
   name: "CvPage",
   components: {
@@ -278,140 +281,12 @@ export default {
   },
   data() {
     return {
-      contractTech: [
-        {
-          name: "Vue",
-          value: 40,
-          x: 30,
-        },
-        {
-          name: "React",
-          value: 40,
-          x: 0,
-        },
-        {
-          name: "Ruby On Rails",
-          value: 20,
-          x: 70,
-        },
-      ],
-      dovetailTech: [
-        {
-          name: "React",
-          value: 35,
-          x: 75,
-        },
-        {
-          name: "Typescript",
-          value: 20,
-          x: 0,
-        },
-        {
-          name: "GraphQl",
-          value: 20,
-          x: 20,
-        },
-        {
-          name: "ExpressJs",
-          value: 15,
-          x: 40,
-        },
-        {
-          name: "PSQL",
-          value: 10,
-          x: 65,
-        },
-      ],
-      aduroTech: [
-        {
-          name: "Vue",
-          value: 40,
-          x: 0,
-        },
-        {
-          name: "ExpressJs",
-          value: 20,
-          x: 70,
-        },
-        {
-          name: "Vuex",
-          value: 15,
-          x: 40,
-        },
-        {
-          name: "Docker",
-          value: 15,
-          x: 55,
-        },
-
-        {
-          name: "PSQL",
-          value: 10,
-          x: 90,
-        },
-      ],
-      netographTech: [
-        {
-          name: "Vue",
-          value: 30,
-          x: 0,
-        },
-        {
-          name: "D3.js",
-          value: 30,
-          x: 30,
-        },
-        {
-          name: "Typescript",
-          value: 20,
-          x: 60,
-        },
-        {
-          name: "Javascript",
-          value: 20,
-          x: 80,
-        },
-      ],
-      allowTech: [
-        {
-          name: "Vue",
-          value: 40,
-          x: 30,
-        },
-        {
-          name: "Javascript",
-          value: 30,
-          x: 0,
-        },
-
-        {
-          name: "Webpack",
-          value: 30,
-          x: 70,
-        },
-      ],
-      fusionTech: [
-        {
-          name: "Java",
-          value: 40,
-          x: 0,
-        },
-        {
-          name: "Vue",
-          value: 30,
-          x: 40,
-        },
-        {
-          name: "Vuex",
-          value: 20,
-          x: 70,
-        },
-        {
-          name: "PSQL",
-          value: 10,
-          x: 90,
-        },
-      ],
+      dovetail,
+      aduro,
+      contract,
+      allow,
+      fusion,
+      netograph,
     };
   },
 };

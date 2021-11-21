@@ -1,5 +1,5 @@
 <template>
-  <section class="transition-all">
+  <section class="transition-all opacity-0">
     <slot />
   </section>
 </template>
@@ -16,6 +16,7 @@ export default {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(({ isIntersecting }) => {
         if (isIntersecting) {
+          this.$el.classList.remove("opacity-0");
           this.$el.classList.add("animate-slide-up");
         }
       });

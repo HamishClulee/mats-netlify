@@ -1,18 +1,5 @@
 <template>
   <div>
-    <!-- <svg ref="container" height="3" width="100%">
-      <g v-if="shouldMount">
-        <rect
-          v-for="({ value, x }, ind) in tech"
-          :key="ind"
-          :width="value * widthCoEf"
-          height="15"
-          :fill="colors[ind]"
-          :x="x * widthCoEf"
-        />
-      </g>
-    </svg> -->
-
     <!-- container -->
     <div class="mt-4 mb-4 flex flex-col md:flex-row w-full">
       <!-- item -->
@@ -45,17 +32,7 @@ export default {
   data() {
     return {
       colors: ["#fbc02d", "#00bfa5", "#ff5722", "#03A9F4", "#545454"],
-      widthCoEf: 0,
-      shouldMount: false,
-      previousX: 0,
     };
-  },
-  mounted() {
-    this.widthCoEf = this.$refs.container.getBoundingClientRect().width / 100;
-
-    this.$nextTick(() => {
-      this.shouldMount = true;
-    });
   },
 };
 </script>

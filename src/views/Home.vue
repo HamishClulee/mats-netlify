@@ -1,8 +1,8 @@
 <template>
-  <div ref="content" class="flex flex-col max-w-screen-2xl mx-auto">
+  <div ref="content" class="flex flex-col max-w-screen-2xl mx-0 md:mx-auto">
     <SlideUpContainer>
       <div
-        class="flex items-start justify-center flex-col py-8 md:py-64 px-8 px-40 max-w-6xl"
+        class="flex items-start justify-center flex-col py-8 md:py-64 px-8 md:px-40 max-w-6xl"
       >
         <h1 class="font-display text-6xl text-secondary mb-4">Hi, I'm Hamish</h1>
         <h3 class="text-3xl text-tertiary mb-4">

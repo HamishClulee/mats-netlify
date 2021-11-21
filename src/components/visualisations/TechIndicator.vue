@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg ref="container" height="8" width="100%">
+    <!-- <svg ref="container" height="3" width="100%">
       <g v-if="shouldMount">
         <rect
           v-for="({ value, x }, ind) in tech"
@@ -11,7 +11,7 @@
           :x="x * widthCoEf"
         />
       </g>
-    </svg>
+    </svg> -->
 
     <!-- container -->
     <div class="mt-4 mb-4 flex flex-col md:flex-row w-full">

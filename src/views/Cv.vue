@@ -128,7 +128,6 @@
       employer="AduroLabs Vietnam"
       title="Frontend Tech Lead"
       dates="January 2020 - January 2021 (1 year)"
-      :was-remote="true"
       :references="true"
     >
       <TechIndicator :tech="aduroTech" />
@@ -142,6 +141,50 @@
         Higher level responsibilities included interviewing potential hires, technical
         product management, building better agile processes and interfacing with other
         teams and departments within the company.
+      </p>
+    </JobCard>
+
+    <JobCard
+      employer="Netograph"
+      title="Lead Frontend Developer"
+      dates="July 2018 - July 2019 (1 year)"
+      :was-remote="true"
+      :references="true"
+    >
+      <TechIndicator :tech="netographTech" />
+      <p class="cv-paragraph">
+        Netograph provides a web app and API. Their frontend is written in <em>VueJs</em>
+        and Typescript, backed by a custom webpack configuration. Visualisations are
+        written in d3.js. I designed the UI and website, and wrote the vast majority
+        frontend code.
+      </p>
+      <p class="cv-paragraph">Note worthy achievements include:</p>
+
+      <ul>
+        <li>
+          Site design; the CEO wanted a no nonsence UI, free of clutter and easy to
+          understand. Due to the staggering amount of data handled by Netograph, this
+          posed some fun challenges.
+        </li>
+
+        <li>
+          The infinite scroll library which had to act in place of pagination due to how
+          lists are displayed and indexed.
+        </li>
+        <li>
+          A system of custom masonry cards designed to show the user a sample of the data
+          associated with the first class object (IPs, domains, superdomains) viewing,
+          remembering that each list could contain over a million items, and each first
+          class object could contain up to 10 lists.
+        </li>
+        <li>
+          A search component to help users find needles in a gigantic haystack, in a
+          manner that was quick and easy.
+        </li>
+      </ul>
+      <p class="cv-paragraph">
+        Overall, this was an awesome development experience, and an unforgettable
+        opportunity.
       </p>
     </JobCard>
 
@@ -237,22 +280,27 @@ export default {
     return {
       contractTech: [
         {
-          name: "React",
-          value: 30,
-          x: 0,
-        },
-        {
           name: "Vue",
           value: 40,
           x: 30,
         },
         {
+          name: "React",
+          value: 40,
+          x: 0,
+        },
+        {
           name: "Ruby On Rails",
-          value: 30,
+          value: 20,
           x: 70,
         },
       ],
       dovetailTech: [
+        {
+          name: "React",
+          value: 35,
+          x: 75,
+        },
         {
           name: "Typescript",
           value: 20,
@@ -265,7 +313,7 @@ export default {
         },
         {
           name: "ExpressJs",
-          value: 25,
+          value: 15,
           x: 40,
         },
         {
@@ -273,17 +321,17 @@ export default {
           value: 10,
           x: 65,
         },
-        {
-          name: "React",
-          value: 25,
-          x: 75,
-        },
       ],
       aduroTech: [
         {
           name: "Vue",
           value: 40,
           x: 0,
+        },
+        {
+          name: "ExpressJs",
+          value: 20,
+          x: 70,
         },
         {
           name: "Vuex",
@@ -295,28 +343,47 @@ export default {
           value: 15,
           x: 55,
         },
-        {
-          name: "ExpressJs",
-          value: 20,
-          x: 70,
-        },
+
         {
           name: "PSQL",
           value: 10,
           x: 90,
         },
       ],
-      allowTech: [
+      netographTech: [
         {
-          name: "Javascript",
+          name: "Vue",
           value: 30,
           x: 0,
         },
+        {
+          name: "D3.js",
+          value: 30,
+          x: 30,
+        },
+        {
+          name: "Typescript",
+          value: 20,
+          x: 60,
+        },
+        {
+          name: "Javascript",
+          value: 20,
+          x: 80,
+        },
+      ],
+      allowTech: [
         {
           name: "Vue",
           value: 40,
           x: 30,
         },
+        {
+          name: "Javascript",
+          value: 30,
+          x: 0,
+        },
+
         {
           name: "Webpack",
           value: 30,

@@ -37,13 +37,13 @@
       <div class="flex flex-col md:flex-row justify-center">
         <div class="mx-0 md:mx-8 mt-4 mb-8 w-full md:w-96">
           <p class="my-2 flex justify-between">
-            ReactJs<span class="italic">1+ years</span>
+            ReactJs<span class="italic">3+ years</span>
           </p>
           <p class="my-2 flex justify-between">
-            VueJs<span class="italic">5+ years</span>
+            VueJs<span class="italic">6+ years</span>
           </p>
           <p class="my-2 flex justify-between">
-            Javascript<span class="italic">7+ years</span>
+            Javascript<span class="italic">8+ years</span>
           </p>
           <p class="my-2 flex justify-between">
             Java<span class="italic">4+ years</span>
@@ -52,28 +52,28 @@
             SASS/SCSS/CSS <span class="italic">6+ years</span>
           </p>
           <p class="my-2 flex justify-between">
-            NodeJs<span class="italic">6+ years</span>
+            NodeJs<span class="italic">8+ years</span>
           </p>
         </div>
 
         <div class="mx-0 md:mx-8 mt-4 mb-8 w-full md:w-96">
           <p class="my-2 flex justify-between">
-            Mentoring<span class="italic">3+ years</span>
+            Mentoring<span class="italic">5+ years</span>
           </p>
           <p class="my-2 flex justify-between">
             Coaching<span class="italic">4+ years</span>
           </p>
           <p class="my-2 flex justify-between">
-            Team Leadership <span class="italic">~2 years</span>
+            Team Leadership <span class="italic">~3 years</span>
           </p>
           <p class="my-2 flex justify-between">
             UI/UX Design <span class="italic">4+ years</span>
           </p>
           <p class="my-2 flex justify-between">
-            Working Remote <span class="italic">5+ years</span>
+            Working Remote <span class="italic">6+ years</span>
           </p>
           <p class="my-2 flex justify-between">
-            Linux<span class="italic">6+ years</span>
+            Linux<span class="italic">8+ years</span>
           </p>
         </div>
       </div>
@@ -82,7 +82,7 @@
     </SlideUpContainer>
 
     <JobCard
-      employer="Contracter"
+      employer="Contractor"
       title="Senior Software Engineer"
       dates="June 2020 - Current"
       :was-remote="true"
@@ -90,11 +90,21 @@
     >
       <TechIndicator :tech="contract" />
       <p class="cv-paragraph">
-        One short run contract for Zer0, a US blockchain start up. Mostly writing React
+        A martech consultancy and engineering role for Betfair AU (currently 3 + months). I am contracted to prepare a path for the creation
+        of a new Martech team within Betfair once my engagement completes. This role is 50% Business Analyst, 50% Engineer. A lot of
+        requirements gathering and reporting, then proposing various engineering solutions to the problems discovered.
+      </p>
+      <p class="cv-paragraph">
+        A leadership, mentoring and engineering role for Watercare NZ (9 months). Bringing an outdated and somewhat disfunctional
+        code base into line with industry best practices. Writing the foundation and first cycle features for a new
+        Watercare product. 100% Frontend work.
+      </p>
+      <p class="cv-paragraph">
+        One short run contract for Zer0 (3 months), a US blockchain start up. Mostly writing React
         but responsibilities included code reviews and mentoring for junior devs.
       </p>
       <p class="cv-paragraph">
-        Another short run contract for Streem Media Au. Working with Vue and Ruby on
+        Another short run contract for Streem Media Au (3 months). Working with Vue and Ruby on
         Rails, mostly focused on overhauling their reporting feature.
       </p>
     </JobCard>

@@ -7,9 +7,13 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
 ## Build Size (Updated 22-Nov-21)
+
 10:48:12 AM: dist/index.html                             1.81 KiB
+
 10:48:12 AM: dist/assets/index.101c167e.js               5.73 KiB / gzip: 2.27 KiB
+
 10:48:12 AM: dist/assets/Home.c8d80b76.js                1.71 KiB / gzip: 0.89 KiB
+
 10:48:12 AM: dist/assets/SlideUpContainer.3768b779.js    0.51 KiB / gzip: 0.35 KiB
 10:48:12 AM: dist/assets/linkedin.7a98026f.js            0.40 KiB / gzip: 0.31 KiB
 10:48:12 AM: dist/assets/NavFoot.001855ea.js             0.69 KiB / gzip: 0.42 KiB
@@ -32,4 +36,3 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 10:48:12 AM: dist/assets/FourOhFour.dbc5214f.css         0.12 KiB / gzip: 0.13 KiB
 10:48:12 AM: dist/assets/index.00f4e52f.css              13.56 KiB / gzip: 3.73 KiB
 10:48:12 AM: dist/assets/vendor.e42ca530.js              73.04 KiB / gzip: 28.98 KiB
-10:48:12 AM: Done in 3.99s.

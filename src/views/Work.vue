@@ -149,6 +149,9 @@ import FeatureCard from "../components/cards/FeatureCard.vue";
 import SlideUpContainer from "../components/animate/SlideUpContainer.vue";
 import NavFoot from "../components/layout/NavFoot.vue";
 import DividerUi from "../components/util/DividerUi.vue";
+
+// import * as filestack from "filestack-js";
+
 export default {
   name: "WorkPage",
   components: { FeatureCard, NavFoot, SlideUpContainer, DividerUi },
@@ -164,6 +167,10 @@ export default {
       act_array: null,
       showmodal: false,
     };
+  },
+  mounted() {
+    // const client = filestack.init("AN1at8r5fTOfSRpnra19Pz");
+    // console.log(client);
   },
 };
 </script>

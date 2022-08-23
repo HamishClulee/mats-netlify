@@ -85,28 +85,32 @@
       employer="Contractor"
       title="Senior Software Engineer"
       dates="June 2020 - Current"
-      :was-remote="true"
+      :was-remote="false"
       :references="true"
     >
       <TechIndicator :tech="contract" />
-      <p class="cv-paragraph">
-        A martech consultancy and engineering role for Betfair AU (currently 3 + months). I am contracted to prepare a path for the creation
+      <div class="cv-paragraph">
+        <h5 class="contractor-main-heading">Betfair AU (currently 3 + months).</h5>
+        <p>I am contracted to prepare a path for the creation
         of a new Martech team within Betfair once my engagement completes. This role is 50% Business Analyst, 50% Engineer. A lot of
-        requirements gathering and reporting, then proposing various engineering solutions to the problems discovered.
-      </p>
-      <p class="cv-paragraph">
-        A leadership, mentoring and engineering role for Watercare NZ (9 months). Bringing an outdated and somewhat disfunctional
+        requirements gathering and reporting, then proposing various engineering solutions to the problems discovered.</p>
+      </div>
+      <div class="cv-paragraph">
+        <h5 class="contractor-main-heading">Watercare NZ (9 months).</h5>
+        <p>A leadership, mentoring and engineering role. Bringing an outdated and somewhat disfunctional
         code base into line with industry best practices. Writing the foundation and first cycle features for a new
-        Watercare product. 100% Frontend work.
-      </p>
-      <p class="cv-paragraph">
-        One short run contract for Zer0 (3 months), a US blockchain start up. Mostly writing React
-        but responsibilities included code reviews and mentoring for junior devs.
-      </p>
-      <p class="cv-paragraph">
-        Another short run contract for Streem Media Au (3 months). Working with Vue and Ruby on
-        Rails, mostly focused on overhauling their reporting feature.
-      </p>
+        Watercare product. 100% Frontend work.</p>
+      </div>
+      <div class="cv-paragraph">
+        <h5 class="contractor-main-heading">Zer0 (3 months).</h5>
+        <p>Short run contract for a US based Blockchain startup. I shipped a reasonably large scale UI prototype to spec while
+          maintaining mentorship and leadership functions for internal Zer0 devs.</p>
+      </div>
+      <div class="cv-paragraph">
+        <h5 class="contractor-main-heading">Streem Media Au (3 months).</h5>
+        <p>Short run contract working with Vue and Ruby on Rails. Shipped a full overhaul of a legacy PDF reporting platform.</p>
+      </div>
+      <div class="w-full align-center -mx-1 my-2 text-md italic text-md text-gray-400">All the postions above were 100% remote</div>
     </JobCard>
 
     <JobCard

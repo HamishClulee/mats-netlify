@@ -2,15 +2,23 @@ export const tech = {
   contract: [
     {
       name: "Vue",
-      value: 40,
+      value: 15,
     },
     {
       name: "React",
-      value: 40,
+      value: 35,
+    },
+    {
+      name: "Preact",
+      value: 10,
+    },
+    {
+      name: "Node - AWS - Lambdas",
+      value: 10,
     },
     {
       name: "Ruby On Rails",
-      value: 20,
+      value: 10,
     },
   ],
   dovetail: [
